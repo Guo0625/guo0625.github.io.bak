@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Mac工程下Resource脚本 | oh_ouyang的博客</title>
+<meta name="author" content="oh_ouyang">
+
+
+<link rel="shortcut icon" href="/public/img/deer3.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/public/css/bootstrap.css">
+<link rel="stylesheet" href="/public/css/font-awesome.css">
+<link rel="stylesheet" href="/public/js/prettify/prettify.css">
+<link rel="stylesheet" href="/public/css/base.css">
+<link href="/pages/atom.xml" rel="alternate" title="oh_ouyang的博客" type="application/atom+xml">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 col-sm-13 col-xs-13 aside visible-md visible-lg">
+  <div class="row">
+    <div class="col-md-2 col-xs-2 aside1">
+      <br>
+      <a class="pjaxlink" href="/"><img src="/public/img/deer3.jpg" class="img-ronuded avatar" style="border-width:0px; border-color:#000"></a>
+      <br><br><br><br>
+      <ul class="nav nav-pills nav-stacked">
+             <!-- 这里是aside1的读书、生活、科研、技术、绘画-->
+         <li><a href="#生活" data-toggle="tab">生活</a></li>
+             <!-- 这里是aside1的读书、生活、科研、技术、绘画-->
+         <li><a href="#编程" data-toggle="tab">编程</a></li>
+             <!-- 这里是aside1的读书、生活、科研、技术、绘画-->
+         <li><a href="#书单" data-toggle="tab">书单</a></li>
+             <!-- 这里是aside1的读书、生活、科研、技术、绘画-->
+         <li><a href="#兴趣" data-toggle="tab">兴趣</a></li>
+             <!-- 这里是aside1的读书、生活、科研、技术、绘画-->
+         <li><a href="#日志" data-toggle="tab">日志</a></li>
+        
+        <li><a href="#tags" data-toggle="tab">Tags</a></li>  
+        <li><a class="pjaxlink" href="/pages/archive.html">记录</a></li>
+        <li><a class="pjaxlink" href="/pages/about.html">关于</a></li>  
+        <!-- <li><a href="#tags" data-toggle="tab"><i class="fa fa-tags fa-lg"></i></a></li>
+        <li><a class="pjaxlink" href="/pages/archive.html"><i class="fa fa-archive fa-lg"></i></a></li>
+        <li><a class="pjaxlink" href="/pages/about.html"><i class="fa fa-user fa-lg"></i></a></li>
+        这是原来现实汉字的代码，我改为了图标 -->
+      </ul>
+      <div class="aside1_bottom">
+        <table class="table table-condensed">
+          <tr>
+            <td><a href="/pages/atom.xml" target="_blank"><i class="fa fa-rss fa-lg" style="color:#fff;"></i></a></td>
+            <td><a href="mailto:guo0625@hotmail.com"><i class="fa fa-envelope-o fa-lg" style="color:#fff;"></i></a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-10 col-xs-10 aside2">
+      <div class="row">
+        <div class="tab-content"> 
+           
+            <div class="tab-pane" id="生活">
+              <div class="list-group">
+                <!--<h2 class="center">生活</h2>-->     <!--原来aside2上面的大标题-->
+                
+                  <a href="/2011/06/25/Seeker-reply-me.html" class="list-group-item-lay pjaxlink">重读《我二十一岁那年》— 史铁生</a>
+                
+              </div>
+            </div>
+           
+            <div class="tab-pane" id="编程">
+              <div class="list-group">
+                <!--<h2 class="center">编程</h2>-->     <!--原来aside2上面的大标题-->
+                
+                  <a href="/2015/05/18/new-post.html" class="list-group-item-lay pjaxlink">Mac工程下Resource脚本</a>
+                
+                  <a href="/2015/05/18/adt.html" class="list-group-item-lay pjaxlink">android之adt脚本打包</a>
+                
+                  <a href="/2015/05/13/wangyepachong.html" class="list-group-item-lay pjaxlink">网页爬虫-JPG图</a>
+                
+                  <a href="/2015/05/13/learn-c-extern.html" class="list-group-item-lay pjaxlink">C语言点滴之extern关键字</a>
+                
+                  <a href="/2015/05/12/learn-c.html" class="list-group-item-lay pjaxlink">C语言点滴之static关键字</a>
+                
+                  <a href="/2015/05/12/android.html" class="list-group-item-lay pjaxlink">初试android逆向工程</a>
+                
+                  <a href="/2013/12/07/linux-history.html" class="list-group-item-lay pjaxlink">（转）Linux 历史初窥</a>
+                
+              </div>
+            </div>
+           
+            <div class="tab-pane" id="书单">
+              <div class="list-group">
+                <!--<h2 class="center">书单</h2>-->     <!--原来aside2上面的大标题-->
+                
+                  <a href="/2014/06/01/Book-List-2014.html" class="list-group-item-lay pjaxlink">2014年阅读书单</a>
+                
+              </div>
+            </div>
+           
+            <div class="tab-pane" id="兴趣">
+              <div class="list-group">
+                <!--<h2 class="center">兴趣</h2>-->     <!--原来aside2上面的大标题-->
+                
+                  <a href="/2014/09/11/Matlab-tips.html" class="list-group-item-lay pjaxlink">Matlab科研小贴士</a>
+                
+              </div>
+            </div>
+           
+            <div class="tab-pane" id="日志">
+              <div class="list-group">
+                <!--<h2 class="center">日志</h2>-->     <!--原来aside2上面的大标题-->
+                
+                  <a href="/2015/05/11/record1.html" class="list-group-item-lay pjaxlink">每日一记</a>
+                
+              </div>
+            </div>
+                
+          <div class="tab-pane" id="tags">
+            <div class="panel-group" id="accordion">
+              <!--<h2 class="center">Tags</h2>-->
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#摘抄">摘抄</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="摘抄" class="panel-collapse collapse">
+                    
+                      <a  href='/2011/06/25/Seeker-reply-me.html' class="list-group-item pjaxlink">
+                        重读《我二十一岁那年》— 史铁生
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#Linux历史">Linux历史</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="Linux历史" class="panel-collapse collapse">
+                    
+                      <a  href='/2013/12/07/linux-history.html' class="list-group-item pjaxlink">
+                        （转）Linux 历史初窥
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#书单">书单</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="书单" class="panel-collapse collapse">
+                    
+                      <a  href='/2014/06/01/Book-List-2014.html' class="list-group-item pjaxlink">
+                        2014年阅读书单
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#Matlab">Matlab</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="Matlab" class="panel-collapse collapse">
+                    
+                      <a  href='/2014/09/11/Matlab-tips.html' class="list-group-item pjaxlink">
+                        Matlab科研小贴士
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#日志">日志</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="日志" class="panel-collapse collapse">
+                    
+                      <a  href='/2015/05/11/record1.html' class="list-group-item pjaxlink">
+                        每日一记
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#android">android</a>
+                      <span class="badge pull-right">2</span>
+                    </h4>
+                  </div>
+                  <div id="android" class="panel-collapse collapse">
+                    
+                      <a  href='/2015/05/18/adt.html' class="list-group-item pjaxlink">
+                        android之adt脚本打包
+                      </a>
+                    
+                      <a  href='/2015/05/12/android.html' class="list-group-item pjaxlink">
+                        初试android逆向工程
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#C语言点滴">C语言点滴</a>
+                      <span class="badge pull-right">2</span>
+                    </h4>
+                  </div>
+                  <div id="C语言点滴" class="panel-collapse collapse">
+                    
+                      <a  href='/2015/05/13/learn-c-extern.html' class="list-group-item pjaxlink">
+                        C语言点滴之extern关键字
+                      </a>
+                    
+                      <a  href='/2015/05/12/learn-c.html' class="list-group-item pjaxlink">
+                        C语言点滴之static关键字
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#python">python</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="python" class="panel-collapse collapse">
+                    
+                      <a  href='/2015/05/13/wangyepachong.html' class="list-group-item pjaxlink">
+                        网页爬虫-JPG图
+                      </a>
+                    
+                  </div>
+                </div>
+               
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#mac脚本">mac脚本</a>
+                      <span class="badge pull-right">1</span>
+                    </h4>
+                  </div>
+                  <div id="mac脚本" class="panel-collapse collapse">
+                    
+                      <a  href='/2015/05/18/new-post.html' class="list-group-item pjaxlink">
+                        Mac工程下Resource脚本
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="col-md-13 col-lg-13 col-sm-13 col-xs-13 aside3">
+        <div id="container">
+          <div id="pjax">
+            <div class="row">
+  <div class="col-md-13 aside3-title">
+    <br>
+    <h2 id="#identifier">Mac工程下Resource脚本</h2>
+    2015年05月18日
+  </div>
+  <div class="col-md-13 aside3-content">
+    <hr>
+    <div id="content">
+      <div class="highlight"><pre><code class="language-text" data-lang="text">_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH
+
+echo _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH
+
+echo PWD: $PWD
+
+
+
+echo Cleaning $_TARGET_BUILD_CONTENTS_PATH/
+
+
+
+rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/test/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/scripts/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/map/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/loading/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/choose/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/images/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/public/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/game/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/sms/*
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/test/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/scripts/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/map/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/images/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/public
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/game/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/particle/* $_TARGET_BUILD_CONTENTS_PATH/particle/
+
+                                             cp -RLp $PWD/../Resources/acms1/particle/test/* $_TARGET_BUILD_CONTENTS_PATH/particle/test/
+
+                                             cp -RLp $PWD/../Resources/acms1/scripts/* $_TARGET_BUILD_CONTENTS_PATH/scripts/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fjfire/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/bisha/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/buchongxingdiji/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
+
+
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss05/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss06/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
+
+
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/map/* $_TARGET_BUILD_CONTENTS_PATH/map/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/bullets/* $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/loading/* $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/choose/* $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/images/* $_TARGET_BUILD_CONTENTS_PATH/ui/images/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_logo/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_diamond2/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_line/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_jinggao/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_explore/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/* $_TARGET_BUILD_CONTENTS_PATH/ui/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/public/* $_TARGET_BUILD_CONTENTS_PATH/ui/public/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/game/* $_TARGET_BUILD_CONTENTS_PATH/ui/game/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/gameover/* $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/sms/* $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
+</code></pre></div>
+    </div>
+    <hr>
+<!--     <div id="disqus_thread">
+  <button type="button" name="oh-ouyang" class="btn btn-default show-commend">	
+  	<i class="fa fa-comment-o fa-lg" style="color: #16a095;"></i>     <!-- 修改显示评论按钮图标-->
+  </button>
+</div>
+ -->
+  </div>
+  <!-- 目录 -->
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
+  </div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:fixed;right:15px;top:62px;">
+  <button id="content_btn" class="btn btn-primary" style="width:43px; height:34px;">
+    <i class="fa fa-lg fa-plus"></i>
+  </button>
+</div>
+<div style="position:fixed;right:15px;top:20px;">
+  <button id="nav_btn" class="btn btn-primary">
+    <i class="fa fa-lg fa-navicon"></i>
+  </button>
+</div>
+<script type="text/javascript" src="/public/js/jquery.js"></script>
+<script type="text/javascript" src="/public/js/bootstrap.js"></script>
+<script src="/public/js/jquery.pjax.js"></script>
+<script src="/public/js/prettify/prettify.js"></script>
+<script src="/public/js/base.js"></script>
+<script src="/public/js/jquery.scrollUp.js"></script>
+<script>
+    $('a[href="#Book"]').tab('show');
+</script>
+
+
+<!--button是右上方导航和显示目录的按钮-->
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54262064-1', 'http://github.com/Guo0625');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

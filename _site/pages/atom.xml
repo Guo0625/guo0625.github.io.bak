@@ -6,11 +6,1000 @@
     <description>My personal blog</description>
     
       <item>
+        <title>Mac工程下Resource脚本</title>
+        <link>http://github.com/Guo0625/2015/05/18/new-post.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/18/new-post.html</guid>
+        <pubDate>Mon, 18 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH
+
+echo _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH
+
+echo PWD: $PWD
+
+
+
+echo Cleaning $_TARGET_BUILD_CONTENTS_PATH/
+
+
+
+rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/test/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/scripts/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/map/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/loading/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/choose/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/images/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/*
+
+
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/public/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/game/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/*
+
+                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/sms/*
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/test/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/scripts/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/map/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/images/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
+
+
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/public
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/game/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
+
+                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/particle/* $_TARGET_BUILD_CONTENTS_PATH/particle/
+
+                                             cp -RLp $PWD/../Resources/acms1/particle/test/* $_TARGET_BUILD_CONTENTS_PATH/particle/test/
+
+                                             cp -RLp $PWD/../Resources/acms1/scripts/* $_TARGET_BUILD_CONTENTS_PATH/scripts/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fjfire/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/player/bisha/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/buchongxingdiji/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
+
+
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss05/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss06/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
+
+
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/map/* $_TARGET_BUILD_CONTENTS_PATH/map/
+
+                                             cp -RLp $PWD/../Resources/acms1/sprites/bullets/* $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/loading/* $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/choose/* $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/images/* $_TARGET_BUILD_CONTENTS_PATH/ui/images/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_logo/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_diamond2/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_line/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_jinggao/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
+
+
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_explore/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/* $_TARGET_BUILD_CONTENTS_PATH/ui/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/public/* $_TARGET_BUILD_CONTENTS_PATH/ui/public/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/game/* $_TARGET_BUILD_CONTENTS_PATH/ui/game/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/gameover/* $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
+
+                                             cp -RLp $PWD/../Resources/acms1/ui/sms/* $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>android之adt脚本打包</title>
+        <link>http://github.com/Guo0625/2015/05/18/adt.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/18/adt.html</guid>
+        <pubDate>Mon, 18 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;mac下配置好adt的环境变量，在工程的根目录下执行build命令，生成工程的配置文件。具体操作网上都有，比我讲解地详细。&lt;/p&gt;
+
+&lt;p&gt;我主要是参考&lt;a href=&quot;http://www.cnblogs.com/stay/archive/2013/05/27/3102027.html&quot;&gt;简单的ant打包，修改渠道号&lt;/a&gt;这篇教程实现了修改versioncode和versionName，并且批量生成10个apk文件。&lt;/p&gt;
+
+&lt;p&gt;下面是相应地脚本文件，使用的话只用修改相应地路径即可。&lt;/p&gt;
+
+&lt;p&gt;若要修改其他的参数可以仿照检索“versionCode”关键字即可，前提是你的manifest文件里已经设置好了。&lt;/p&gt;
+
+&lt;p&gt;脚本修改好后在终端输入如下命令即可：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ ant run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ant.properties&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# This file is automatically generated by Android Tools.
+# Do not modify this file -- YOUR CHANGES WILL BE ERASED!
+#
+# This file must be checked in Version Control Systems.
+#
+# To customize properties used by the Ant build system edit
+# &amp;quot;ant.properties&amp;quot;, and override values to adapt the script to your
+# project structure.
+#
+# To enable ProGuard to shrink and obfuscate your code, uncomment this (available properties: sdk.dir, user.home):
+#proguard.config=${sdk.dir}/tools/proguard/proguard-android.txt:proguard-project.txt
+
+
+#编码方式
+java.encoding=utf-8
+#签名key文件绝对路径
+key.store=/Users/username/Documents/Apk_fildes/keystore/mykeystore.keystore
+#签名文件密码
+key.store.password=123456789
+#签名别称，中文的话需要转成utf-8编码，可以使用JDK自带的native2ascii工具
+key.alias=mykeystore.keystore
+#签名别称密码
+key.alias.password=123456789
+market_channels=00000
+#设置app的版本（1.0.1）eg:version_code_1.version_code_2.app_version
+version_code_1=1
+version_code_2=0
+app_version=0,1,2,3,4,5,6,7,8,9
+#project name
+project_name=MyTest
+#project path
+project_path=/Users/username/Documents/LUA/projects/proj.android
+#project out path
+project_out_path=/Users/username/Documents/Apk_fildes/keystore/out
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;local.properties&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# This file is automatically generated by Android Tools.
+# Do not modify this file -- YOUR CHANGES WILL BE ERASED!
+#
+# This file must *NOT* be checked into Version Control Systems,
+# as it contains information specific to your local configuration.
+
+# location of the SDK. This is only used by Ant
+# For customization when using a Version Control System, please read the
+# header note.
+sdk.dir=/Users/username/Documents/adt/sdk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;build.xml&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project name=&amp;quot;${project_name}&amp;quot; default=&amp;quot;add&amp;quot;&amp;gt;
+    &amp;lt;property file=&amp;quot;local.properties&amp;quot; /&amp;gt;
+    &amp;lt;property file=&amp;quot;ant.properties&amp;quot; /&amp;gt;
+    &amp;lt;property environment=&amp;quot;env&amp;quot; /&amp;gt;
+    &amp;lt;condition property=&amp;quot;sdk.dir&amp;quot; value=&amp;quot;${env.ANDROID_HOME}&amp;quot;&amp;gt;
+        &amp;lt;isset property=&amp;quot;env.ANDROID_HOME&amp;quot; /&amp;gt;
+    &amp;lt;/condition&amp;gt;
+    &amp;lt;loadproperties srcFile=&amp;quot;project.properties&amp;quot; /&amp;gt;
+    &amp;lt;fail
+            message=&amp;quot;sdk.dir is missing. Make sure to generate local.properties using &amp;#39;android update project&amp;#39; or to inject it through the ANDROID_HOME environment variable.&amp;quot;
+            unless=&amp;quot;sdk.dir&amp;quot;
+    /&amp;gt;
+    &amp;lt;import file=&amp;quot;custom_rules.xml&amp;quot; optional=&amp;quot;true&amp;quot; /&amp;gt;
+    &amp;lt;import file=&amp;quot;${sdk.dir}/tools/ant/build.xml&amp;quot; /&amp;gt;
+
+ &amp;lt;!--修改包名等--&amp;gt;
+&amp;lt;!--相关环境及工具配置--&amp;gt;
+ &amp;lt;property name=&amp;quot;sdk.platformtools&amp;quot; value=&amp;quot;${sdk.dir}/platform-tools&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;sdk.tools&amp;quot; value=&amp;quot;${sdk.dir}/tools&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;aapt&amp;quot; value=&amp;quot;${sdk.platformtools}/aapt&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;adb&amp;quot; value=&amp;quot;${sdk.platformtools}/adb&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;dx&amp;quot; value=&amp;quot;${sdk.platformtools}/dx&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;apkbuilder&amp;quot; value=&amp;quot;${sdk.tools}/apkbuilder&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;android.jar&amp;quot; value=&amp;quot;${sdk.dir}/platforms/android-17/android.jar&amp;quot; /&amp;gt;
+
+ &amp;lt;property name=&amp;quot;old_package_name&amp;quot; value=&amp;quot;com.example.travel&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;new_package_name&amp;quot; value=&amp;quot;com.zwtx.travel&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;org_project.dir&amp;quot; value=&amp;quot;${project_out_path}&amp;quot; /&amp;gt;
+ &amp;lt;!--原工程目录--&amp;gt;
+ &amp;lt;property name=&amp;quot;project.dir&amp;quot; value=&amp;quot;${project_path}&amp;quot; /&amp;gt;
+
+
+ &amp;lt;!--新工程各个目录--&amp;gt;
+ &amp;lt;property name=&amp;quot;build.dir&amp;quot; value=&amp;quot;${org_project.dir}/bin&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;project.dir&amp;quot; value=&amp;quot;${org_project.dir}/temp&amp;quot; /&amp;gt;
+ &amp;lt;!--新工程目录--&amp;gt;
+ &amp;lt;property name=&amp;quot;classes.dir&amp;quot; value=&amp;quot;${project.dir}/bin/classes&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;buildtemp.dir&amp;quot; value=&amp;quot;${project.dir}/bin&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;src.dir&amp;quot; value=&amp;quot;${project.dir}/src&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;res.dir&amp;quot; value=&amp;quot;${project.dir}/res&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;gen.dir&amp;quot; value=&amp;quot;${project.dir}/gen&amp;quot; /&amp;gt;
+ &amp;lt;property name=&amp;quot;asset.dir&amp;quot; value=&amp;quot;${project.dir}/assets&amp;quot; /&amp;gt;
+
+ &amp;lt;taskdef resource=&amp;quot;net/sf/antcontrib/antcontrib.properties&amp;quot;&amp;gt;  
+  &amp;lt;classpath&amp;gt;  
+    &amp;lt;pathelement location=&amp;quot;lib/ant-contrib-1.0b3.jar&amp;quot;/&amp;gt;  
+  &amp;lt;/classpath&amp;gt;  
+&amp;lt;/taskdef&amp;gt;  
+ &amp;lt;target name=&amp;quot;run&amp;quot;&amp;gt;  
+&amp;lt;!--    &amp;lt;foreach target=&amp;quot;modify_manifest&amp;quot; list=&amp;quot;${market_channels}&amp;quot; param=&amp;quot;channel&amp;quot; delimiter=&amp;quot;,&amp;quot;&amp;gt; 
+   &amp;lt;/foreach&amp;gt;   --&amp;gt;
+   &amp;lt;foreach target=&amp;quot;modify_manifest&amp;quot; list=&amp;quot;${app_version}&amp;quot; param=&amp;quot;versioncode&amp;quot; delimiter=&amp;quot;,&amp;quot;&amp;gt;  
+   &amp;lt;/foreach&amp;gt;  
+ &amp;lt;/target&amp;gt;  
+
+&amp;lt;target name=&amp;quot;modify_manifest&amp;quot;&amp;gt;  
+
+  &amp;lt;echo&amp;gt;${channel}&amp;lt;/echo&amp;gt;
+  &amp;lt;echo&amp;gt;${versioncode}&amp;lt;/echo&amp;gt;
+&amp;lt;!-- 替换versionCode --&amp;gt;
+  &amp;lt;replaceregexp flags=&amp;quot;g&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; byline=&amp;quot;true&amp;quot;&amp;gt;
+    &amp;lt;regexp pattern=&amp;quot;android:versionCode(.*)&amp;quot;/&amp;gt;
+     &amp;lt;substitution expression=&amp;quot;android:versionCode=&amp;amp;quot;${versioncode}&amp;amp;quot;&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;&amp;quot; includes=&amp;quot;AndroidManifest.xml&amp;quot;/&amp;gt;
+   &amp;lt;/replaceregexp&amp;gt;
+&amp;lt;!-- 替换versionName --&amp;gt;
+  &amp;lt;replaceregexp flags=&amp;quot;g&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; byline=&amp;quot;true&amp;quot;&amp;gt;
+    &amp;lt;regexp pattern=&amp;quot;android:versionName(.*)&amp;quot;/&amp;gt;
+     &amp;lt;substitution expression=&amp;quot;android:versionName=&amp;amp;quot;${version_code_1}.${versioncode}&amp;amp;quot;&amp;gt;&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;&amp;quot; includes=&amp;quot;AndroidManifest.xml&amp;quot;/&amp;gt;
+   &amp;lt;/replaceregexp&amp;gt;
+  &amp;lt;property name=&amp;quot;project_new&amp;quot;&amp;gt;add&amp;lt;/property&amp;gt;
+  &amp;lt;property name=&amp;quot;reasedAPK&amp;quot; value=&amp;quot;${project_name}_v${version_code_1}.${versioncode}.apk&amp;quot; /&amp;gt;
+  &amp;lt;antcall target=&amp;quot;add&amp;quot; /&amp;gt;
+&amp;lt;/target&amp;gt;
+
+
+ &amp;lt;target name=&amp;quot;init&amp;quot;&amp;gt;
+  &amp;lt;echo&amp;gt; &amp;quot;Target init is called&amp;quot; &amp;lt;/echo&amp;gt;
+   &amp;lt;!--替换工程中出现的包名 --&amp;gt;
+  &amp;lt;replaceregexp flags=&amp;quot;g&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; byline=&amp;quot;true&amp;quot;&amp;gt;
+    &amp;lt;regexp pattern=&amp;quot;package(.*)${old_package_name}&amp;quot;/&amp;gt;
+     &amp;lt;substitution expression=&amp;quot;package=&amp;amp;quot;${new_package_name}&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;${project.dir}&amp;quot; includes=&amp;quot;AndroidManifest.xml&amp;quot;/&amp;gt;
+   &amp;lt;/replaceregexp&amp;gt;
+&amp;lt;!--修改工程的package ****包名--&amp;gt;
+  &amp;lt;replaceregexp flags=&amp;quot;g&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; byline=&amp;quot;true&amp;quot;&amp;gt;
+    &amp;lt;regexp pattern=&amp;quot;package(.*)${old_package_name}&amp;quot;/&amp;gt;
+     &amp;lt;substitution expression=&amp;quot;package ${new_package_name}&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;${project.dir}/src&amp;quot; includes=&amp;quot;**/*.java&amp;quot;/&amp;gt;
+   &amp;lt;/replaceregexp&amp;gt;
+&amp;lt;!--修改工程的import ****.R包名--&amp;gt;
+  &amp;lt;replaceregexp flags=&amp;quot;g&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; byline=&amp;quot;true&amp;quot;&amp;gt;
+    &amp;lt;regexp pattern=&amp;quot;import(.*)${old_package_name}.R&amp;quot;/&amp;gt;
+     &amp;lt;substitution expression=&amp;quot;import ${new_package_name}.R&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;${project.dir}/src&amp;quot; includes=&amp;quot;**/*.java&amp;quot;/&amp;gt;
+   &amp;lt;/replaceregexp&amp;gt;
+  &amp;lt;/target&amp;gt;
+
+
+  &amp;lt;!--生成R.java文件 ${sdk.dir}\platform-tools\aapt.exe--&amp;gt;
+  &amp;lt;target name=&amp;quot;genRJava&amp;quot;&amp;gt;
+    &amp;lt;echo&amp;gt; &amp;quot;Target genRJava is called&amp;quot; &amp;lt;/echo&amp;gt;
+    &amp;lt;exec executable=&amp;quot;/Users/xunzhou/Documents/adt/sdk/platform-tools/aapt&amp;quot; failonerror=&amp;quot;true&amp;quot;&amp;gt;
+      &amp;lt;arg value=&amp;quot;package&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-m&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-J&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${project.dir}/gen&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-M&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${project.dir}/AndroidManifest.xml&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-S&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${res.dir}&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-I&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${android.jar}&amp;quot;/&amp;gt;
+    &amp;lt;/exec&amp;gt;
+  &amp;lt;/target&amp;gt;
+  &amp;lt;!-- 项目编译 --&amp;gt;
+  &amp;lt;target name=&amp;quot;compile&amp;quot; &amp;gt;
+    &amp;lt;echo&amp;gt; &amp;quot;Target compile is called&amp;quot; &amp;lt;/echo&amp;gt;
+    &amp;lt;javac encoding=&amp;quot;UTF-8&amp;quot; target=&amp;quot;1.5&amp;quot; debug=&amp;quot;true&amp;quot; extdirs=&amp;quot;&amp;quot; 
+     srcdir=&amp;quot;${gen.dir};${src.dir}&amp;quot; 
+     destdir=&amp;quot;${classes.dir}&amp;quot; bootclasspath=&amp;quot;${android.jar}&amp;quot;&amp;gt;
+      &amp;lt;classpath&amp;gt;
+        &amp;lt;fileset dir=&amp;quot;${project.dir}/libs&amp;quot; includes=&amp;quot;*.jar&amp;quot;&amp;gt;
+        &amp;lt;/fileset&amp;gt;
+      &amp;lt;/classpath&amp;gt;
+    &amp;lt;/javac&amp;gt;
+  &amp;lt;/target&amp;gt;
+&amp;lt;!-- 生成dex文件 ${sdk.dir}\platform-tools\dx.bat --&amp;gt;
+  &amp;lt;target name=&amp;quot;dex&amp;quot; &amp;gt;
+    &amp;lt;echo&amp;gt; &amp;quot;Target dex is called&amp;quot; &amp;lt;/echo&amp;gt;
+    &amp;lt;apply executable=&amp;quot;${sdk.dir}/platform-tools/dx&amp;quot; failonerror=&amp;quot;true&amp;quot; parallel=&amp;quot;true&amp;quot;&amp;gt;
+      &amp;lt;arg value=&amp;quot;--dex&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;--output=${buildtemp.dir}/classes.dex&amp;quot;/&amp;gt;
+      &amp;lt;arg path=&amp;quot;${classes.dir}&amp;quot;/&amp;gt;
+      &amp;lt;fileset dir=&amp;quot;${project.dir}/libs&amp;quot; includes=&amp;quot;*.jar&amp;quot;/&amp;gt;
+    &amp;lt;/apply&amp;gt;
+  &amp;lt;/target&amp;gt;
+
+ &amp;lt;!-- 打包资源文件 ${sdk.dir}\platform-tools\aapt.exe --&amp;gt;
+  &amp;lt;target name=&amp;quot;packageRes&amp;quot;&amp;gt;
+    &amp;lt;echo&amp;gt; &amp;quot;Target packageRes is called&amp;quot; &amp;lt;/echo&amp;gt;
+    &amp;lt;exec executable=&amp;quot;${aapt}&amp;quot; failonerror=&amp;quot;true&amp;quot;&amp;gt;
+      &amp;lt;arg value=&amp;quot;package&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-f&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-M&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${project.dir}/AndroidManifest.xml&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-S&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${res.dir}&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-A&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${asset.dir}&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-I&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${android.jar}&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-F&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${buildtemp.dir}/resources.ap_&amp;quot;/&amp;gt;
+    &amp;lt;/exec&amp;gt;
+  &amp;lt;/target&amp;gt;
+
+ &amp;lt;!-- 打包Apk --&amp;gt;
+  &amp;lt;target name=&amp;quot;add&amp;quot; depends=&amp;quot;init,genRJava,compile,dex,packageRes&amp;quot;&amp;gt;
+    &amp;lt;echo&amp;gt; &amp;quot;Target add is called&amp;quot; &amp;lt;/echo&amp;gt;
+    &amp;lt;exec executable=&amp;quot;${apkbuilder}&amp;quot; failonerror=&amp;quot;true&amp;quot;&amp;gt;
+      &amp;lt;arg value=&amp;quot;${buildtemp.dir}/unsigntest.apk&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-u&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-z&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${buildtemp.dir}/resources.ap_&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-f&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${buildtemp.dir}/classes.dex&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;-rf&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${src.dir}&amp;quot;/&amp;gt;
+      &amp;lt;!--打包.jar文件--&amp;gt;
+      &amp;lt;arg value=&amp;quot;-rj&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${project.dir}/libs&amp;quot;/&amp;gt;
+      &amp;lt;!--打包.so文件--&amp;gt;
+      &amp;lt;arg value=&amp;quot;-nf&amp;quot;/&amp;gt;
+      &amp;lt;arg value=&amp;quot;${project.dir}/libs&amp;quot;/&amp;gt;
+    &amp;lt;/exec&amp;gt;
+    &amp;lt;!-- 签名 --&amp;gt;
+  &amp;lt;signjar
+     jar=&amp;quot;${buildtemp.dir}/unsigntest.apk&amp;quot;
+     signedjar=&amp;quot;${project_out_path}/${reasedAPK}&amp;quot;
+     keystore=&amp;quot;${key.store}&amp;quot;
+     storepass=&amp;quot;${key.store.password}&amp;quot;
+     alias=&amp;quot;${key.alias}&amp;quot;
+     keypass=&amp;quot;${key.alias.password}&amp;quot;
+     verbose=&amp;quot;-verbose&amp;quot;/&amp;gt;
+   &amp;lt;/target&amp;gt;
+
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1sjzBK0d&quot;&gt;配置文件下载&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>网页爬虫-JPG图</title>
+        <link>http://github.com/Guo0625/2015/05/13/wangyepachong.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/13/wangyepachong.html</guid>
+        <pubDate>Wed, 13 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;从网上找到的网页爬虫代码，可以爬网页上的jpg图片&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# -*- coding: utf-8 -*-
+import urllib2,urllib,re
+
+tmmurl =&amp;quot;http://www.rouruan.com/models/mdown/&amp;quot;
+
+i = 3
+while i&amp;lt;68:
+    url = tmmurl + str(i)
+    up = urllib2.urlopen(url)
+    cont = up.read()
+    cont = cont.decode(&amp;#39;UTF-8&amp;#39;)
+    reg = r&amp;#39;src=&amp;quot;(.uploads.+?\.jpg)&amp;quot; class&amp;#39;
+    imgre = re.compile(reg)
+    imglist = re.findall(imgre, cont)
+    mdnh=&amp;quot;&amp;quot;&amp;quot;xjt_p4&amp;quot;&amp;gt;&amp;quot;&amp;quot;&amp;quot;
+    mdnt=&amp;quot;&amp;lt;/h1&amp;gt;&amp;quot;
+    mnh = cont.find(mdnh)
+    mnt = cont.find(mdnt, mnh)
+    mn = cont[mnh:mnt+len(mdnt)]
+    md_nh=&amp;quot;&amp;lt;h1&amp;gt;&amp;quot;
+    md_nt=&amp;quot;&amp;lt;/h1&amp;gt;&amp;quot;
+    m_nh = mn.find(md_nh)
+    m_nt = mn.find(md_nt, m_nh)
+    m_n = mn[m_nh+len(md_nh):m_nt]
+    numreg = r&amp;#39;href=&amp;quot;#&amp;quot;&amp;gt;TuiGirl.+?(\d+).+?/a&amp;#39;
+    numre = re.compile(numreg)
+    numlist = re.findall(numre, cont)
+    if len(numlist)!=0:
+        number = numlist[0]
+    else:
+        number = 1
+    x=0
+    for imgurl in imglist:
+        urllib.urlretrieve(&amp;quot;http://www.rouruan.com&amp;quot;+imgurl,&amp;quot;//Users//xunzhou//Downloads//&amp;quot;+str(number)+&amp;quot;-&amp;quot;+m_n+str(x)+&amp;quot;.jpg&amp;quot;)
+        x+=1
+    i +=1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>C语言点滴之extern关键字</title>
+        <link>http://github.com/Guo0625/2015/05/13/learn-c-extern.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/13/learn-c-extern.html</guid>
+        <pubDate>Wed, 13 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;假如a.h中有 int a=10; t1.cpp和t2.cpp同时include &amp;quot;a.h&amp;quot;则编译不成功，因为a重复定义；&lt;/p&gt;
+
+&lt;p&gt;如果 a.h中是 static int a=10;则可以，因为t1和t2中的a只是名字相同，地址空间不同；&lt;/p&gt;
+
+&lt;p&gt;如果a.h中是 extern int a; 并且在a.cpp中 int a=10; 则t1和t2中的a指向同一个地址空间。&lt;/p&gt;
+
+&lt;p&gt;通过如下例子学习extern：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  test.h
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#ifndef Ctest_test_h
+#define Ctest_test_h
+
+extern int a;
+
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  test.c
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#include &amp;quot;test.h&amp;quot;
+
+int a = 10;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  foo.h
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#ifndef Ctest_foo_h
+#define Ctest_foo_h
+
+void print_a();
+
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  test.c
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;quot;test.h&amp;quot;
+
+void print_a()
+{
+    printf(&amp;quot;foo a = %d\n&amp;quot;, a);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  foo1.h
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#ifndef Ctest_foo1_h
+#define Ctest_foo1_h
+
+void print_b();
+
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  foo1.c
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;quot;test.h&amp;quot;
+
+//extern int a;
+
+void print_b()
+{
+    printf(&amp;quot;foo1 a = %d\n&amp;quot;, a);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  main.c
+//  Ctest
+//
+//  Created by bo li on 15-5-13.
+//  Copyright (c) 2015年 zxtw. All rights reserved.
+//
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;quot;foo.h&amp;quot;
+#include &amp;quot;foo1.h&amp;quot;
+
+int main(int argc, const char * argv[])
+{
+
+    // insert code here...
+
+    print_a();
+    print_b();
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;运行结果：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/learn-c-extern.png&quot; alt=&quot;6&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;下面是网上的&lt;a href=&quot;http://stackoverflow.com/questions/496448/how-to-correctly-use-the-extern-keyword-in-c&quot;&gt;回答&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;extern tells the compiler that this data is defined somewhere and will be connected with the linker.
+
+With the help of the responses here and talking to a few friends here is the practical example of a use of extern.
+
+Example 1 - to show a pitfall:
+
+File stdio.h:
+
+int errno;
+/* other stuff...*/
+myCFile1.c:
+#include &amp;lt;stdio.h&amp;gt;
+
+Code...
+myCFile2.c:
+#include &amp;lt;stdio.h&amp;gt;
+
+Code...
+If myCFile1.o and myCFile2.o are linked, each of the c files have separate copies of errno. This is a problem as errno is suppose to be constant over all linked files.
+
+Example 2 - The fix.
+
+File stdio.h:
+
+extern int errno;
+/* other stuff...*/
+File stdio.c
+
+int errno;
+myCFile1.c:
+#include &amp;lt;stdio.h&amp;gt;
+
+Code...
+myCFile2.c:
+#include &amp;lt;stdio.h&amp;gt;
+
+Code...
+Now if both myCFile1.o and MyCFile2.o are linked by the linker they will both point to the same errno. Thus, solving the implementation with extern.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>C语言点滴之static关键字</title>
+        <link>http://github.com/Guo0625/2015/05/12/learn-c.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/12/learn-c.html</guid>
+        <pubDate>Tue, 12 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;static 的使用示例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;    &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;static从单词字面意思理解为：静态的意思。那么首先理解什么是静态？静态是通过什么体现的？有静态肯定会有“动态”。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://weibo.com/1970890475/profile?rightmod=1&amp;amp;wvr=6&amp;amp;mod=personinfo&quot;&gt;微博留言&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>初试android逆向工程</title>
+        <link>http://github.com/Guo0625/2015/05/12/android.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/12/android.html</guid>
+        <pubDate>Tue, 12 May 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;今天公司要测试计费的sdk，于是心血来潮打算逆向一下公司的sdk。将sdk中的支付金额和渠道号更换，查看sdk的计费原理。&lt;/p&gt;
+
+&lt;p&gt;首先，我是android逆向的小白,谷歌到一篇我自认为不错的&lt;a href=&quot;https://techstarspace.wordpress.com/2015/05/04/reverse-engineering-3-dex2jar-with-jd-gui-decompiler/&quot;&gt;教程&lt;/a&gt;，按照这篇操作下来，你就可以查看apk文件的java源码了。同时也可以参考这篇&lt;a href=&quot;http://blog.csdn.net/wirelessqa/article/details/8997168&quot;&gt;教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;有时你环境搭好后，运行命令可能会有如下错误：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Permission&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;denied&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在终端输入命令，修改执行脚本的权限，也可以修改所有的文件权限:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;$ &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; 或 $ &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;权限修改后，又报出如下错误：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;thread&lt;/span&gt; &amp;quot;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&amp;quot; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UnsupportedClassVersionError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;googlecode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dex2jarCmd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Unsupported&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;major&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;51.0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defineClass1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defineClassCond&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;631&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defineClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;615&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SecureClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defineClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SecureClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;141&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defineClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;283&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;access&lt;/span&gt;$&lt;span class=&quot;mi&quot;&gt;000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;58&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;$&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;197&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;security&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AccessController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doPrivileged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URLClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;190&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;306&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;misc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Launcher&lt;/span&gt;$&lt;span class=&quot;n&quot;&gt;AppClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Launcher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;301&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;at&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ClassLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;247&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这说明你的jdk版本太低，可能低于1.7，不支持现在的操作。你有两个选择：一是、升级jdk；二是、选用低版本的dex2jar。（我遇到了上述问题，鉴于升级jdk可能带来其他环境的更改选择了&lt;a href=&quot;http://sourceforge.net/projects/dex2jar/&quot;&gt;dex2jar-0.0.9.15&lt;/a&gt;这个版本）&lt;/p&gt;
+
+&lt;p&gt;上述只是可以将class.dex转换成jar文件。&lt;/p&gt;
+
+&lt;p&gt;命令如下：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.15&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dex2jar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;9.15&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;即可在目录下看到classes-dex2jar.jar文件。&lt;/p&gt;
+
+&lt;p&gt;而查看jar文件需要用到jd-gui这个软件，直接下载安装即可。导入jar文件就可以查看，也可以将java代码保存。&lt;/p&gt;
+
+&lt;p&gt;至此，查看apk源码的操作已介绍完毕。&lt;/p&gt;
+
+&lt;p&gt;接下来便是，解析出manifest文件，通过使用&lt;a href=&quot;http://connortumbleson.com/apktool/googlecode/&quot;&gt;apkTool&lt;/a&gt;工具可以将apk文件解析。&lt;/p&gt;
+
+&lt;p&gt;apktool可能也会遇到上述与dex2jar相似的问题，无非是修改权限、换版本照着做就可以了。&lt;/p&gt;
+
+&lt;p&gt;执行命令解析apk文件&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sdkPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;n&quot;&gt;apktool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;liantongstar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Baksmaling&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Loading&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Loaded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Decoding&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AndroidManifest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Loading&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apktool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;framework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Loaded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Regular&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;manifest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Decoding&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Decoding&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*/*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XMLs&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Copying&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assets&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libs&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在相同目录下生成与apk同名的文件夹。&lt;/p&gt;
+
+&lt;p&gt;然后开始修改源码中的计费信息，通过对照jar文件中的源码，以及smali文件中相应的代码，来修改！再次不多说。&lt;/p&gt;
+
+&lt;p&gt;修改后要重新打包成apk文件，执行命令如下：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sdkPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;n&quot;&gt;apktool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &amp;quot;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&amp;quot; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Checking&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whether&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sources&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;has&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Smaling&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Checking&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whether&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;has&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Building&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Copying&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;libs&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Building&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sdkPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;重新签名，安装测试即可。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sdkPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;n&quot;&gt;jarsigner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keystore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keystore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signedjar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digestalg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SHA1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sigalg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MD5withRSA&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keystore&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://yunpan.cn/cjeWg8yfpnzjc&quot;&gt;mac下资源下载&lt;/a&gt; 提取码：5cfb&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
         <title>每日一记</title>
         <link>http://github.com/Guo0625/2015/05/11/record1.html</link>
         <guid isPermaLink="true">http://github.com/Guo0625/2015/05/11/record1.html</guid>
         <pubDate>Mon, 11 May 2015 00:00:00 +0800</pubDate>
-        <description></description>
+        <description>&lt;p&gt;2015-05-08 搭建Blog环境，安装jekyll、升级Ruby。&lt;/p&gt;
+
+&lt;p&gt;2015-05-09 去动物园玩。&lt;/p&gt;
+
+&lt;p&gt;2015-05-10 搭建Blog，学习语法。&lt;/p&gt;
+
+&lt;p&gt;2015-05-11 搭建Bolg，fork主题。&lt;/p&gt;
+
+&lt;p&gt;2015-05-12 今天的任务是完成公司的工作后，继续学习C语言，记录笔记。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Matlab科研小贴士</title>
+        <link>http://github.com/Guo0625/2014/09/11/Matlab-tips.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2014/09/11/Matlab-tips.html</guid>
+        <pubDate>Thu, 11 Sep 2014 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;使用MATLAB运行算法程序时，可能遇到各种各样的报错。比如，为了保护隐私数据，我在分布式矩阵补全算法中加入随机矩阵之后，某项变量在运行几百步之后会出现NaN报错。我只根据算法顺序去分析问题出现的可能原因，并修改程序。感觉并没有很好地利用MATLAB的强大功能去锁定症结所在。幸运的是，&lt;a href=&quot;http://home.ustc.edu.cn/%7Eshiwei00/index.html&quot;&gt;施伟&lt;/a&gt;大师兄当时和我在一起，他非常热心地帮我分析问题，教我以后遇到类似状况应该怎么去分析与思考。和大师兄讨论了半小时，感觉自己收获不少。&lt;/p&gt;
+
+&lt;p&gt;这篇文章会陆续记录下自己使用MATLAB的体会，以及解决问题的一些技巧。&lt;/p&gt;
+
+&lt;h3&gt;Clear&lt;/h3&gt;
+
+&lt;p&gt;运行一段代码前通常需要将工作空间里的已有数据清除掉。只需要在编辑有实际意义的代码之前写下如下代码：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;close&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Random Seed&lt;/h3&gt;
+
+&lt;p&gt;为了保证程序在相同环境下运行以便测试某一个或几个改变对于算法的影响，在使用各种random命令时，需要设定固定种子。这样就不会因为每次随机产生的序列不同而影响程序运行结果。设置随机种子的代码如下：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;%% random seed&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;%seed=round(5000*rand);       % use this line if you set a random seed&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3302&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;% use this line if you set a fixed seed. 3302 can be replaced by other numbers.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Seed = %d\n&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;% print the current seed &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;RandStream&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;file&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;RandStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setGlobalStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RandStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;mt19937ar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;seed&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+   &lt;span class=&quot;nb&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;^&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;NaN&lt;/h3&gt;
+
+&lt;p&gt;NaN是Not a Number的缩写。当某变量显示NaN时，表示该变量是不明确的数值结果。比如0/0、inf/inf等运算会出现NaN报错。遇到这种情况，首先判断NaN出现在哪一步：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;isnan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norres&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;%括号里是变量名。判断norres是否为NaN，若是，则在该步暂停程序。&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;keyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;再在命令窗里单独查看与该变量有关的其他变量，从而排除正常变量，获知究竟是哪个或哪几个变量出了问题，变为无穷大或无穷小。再检查与这些变量有关的算法。&lt;/p&gt;
+
+&lt;h3&gt;SaveAs&lt;/h3&gt;
+
+&lt;p&gt;若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用&lt;code&gt;hold on&lt;/code&gt;命令将所有虚线画在同一张图上，也可以使用&lt;code&gt;saveas&lt;/code&gt;将所有图片自动保存。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;%% plot&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;semilogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_axis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;b-&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;%b：蓝色。－：线段形状&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;fontsize&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;grid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it Iteration&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it Normalized residual&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it text&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;%text：这条蓝色代表什么&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hold&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;saveas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gcf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;filename&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;fig&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;c&quot;&gt;%filename：将图片保存为这个名字。fig：保存为fig格式&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;保存变量数据的命令：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;save(&amp;#39;filename&amp;#39;)
+save(&amp;#39;filename&amp;#39;,&amp;#39;variables&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;注意，在使用&lt;code&gt;hold on&lt;/code&gt;命令时，应该保留上次程序运行后产生的各种数据。即不能在程序中写类似与&lt;code&gt;clear all&lt;/code&gt;之类的清除语句，否则上次曲线图也将被删除。&lt;/p&gt;
+
+&lt;h3&gt;矩阵规范化&lt;/h3&gt;
+
+&lt;p&gt;已知满秩矩阵A，进行下面操作使其所有奇异值均为1。&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;安装CVX&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;将cvx压缩包解压&lt;/li&gt;
+&lt;li&gt;将cvx文件夹拷贝至如D:\MATLAB Programs\Compressed Sensing目录下&lt;/li&gt;
+&lt;li&gt;在Current Folder窗口中打开cvx文件夹&lt;/li&gt;
+&lt;li&gt;在Command Window中输入cvx_setup&lt;/li&gt;
+&lt;li&gt;在MATLAB的File菜单下的set path把此路径加上。&lt;/li&gt;
+&lt;li&gt;把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下&lt;/li&gt;
+&lt;li&gt;完成&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;%%分段运行程序&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;选中%%分段&lt;/li&gt;
+&lt;li&gt;右键选择&lt;code&gt;evaluate current section&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
       </item>
     
       <item>
