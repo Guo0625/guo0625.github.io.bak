@@ -9,8 +9,6 @@
 
   /sitemap.txt
 
-  /page2/index.html
-
 
 
   /2015/05/18/new-post.html
@@ -30,7 +28,5 @@
   /2014/09/11/Matlab-tips.html
 
   /2014/06/01/Book-List-2014.html
-
-  /2013/12/07/linux-history.html
 
   /2011/06/25/Seeker-reply-me.html
