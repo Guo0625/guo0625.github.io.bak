@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "vector中erase删除"
+title: "C++: vector容器"
 categories: 编程
-tags: vector STL
+tags: vector STL C++
 ---
 
 ```

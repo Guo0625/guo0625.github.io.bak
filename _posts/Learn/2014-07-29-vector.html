@@ -1,0 +1,944 @@
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    <meta charset="utf-8">
+
+    <title>C++: Vector容器</title>
+    <meta name="author" content="Leslie Zhu">
+    <meta name="description" content="I'm Leslie Zhu(朱春来), a programmer and Financial Engineer from BeiJing, China. This is my blog.">
+    <meta property="og:site_name" content="敏毅"/>
+    <meta name="Keywords" content="leslie,lesliezhu,leslie Zhu,敏毅,minyi, blog, blogging, youtube, videos, web, programming, ruby, python, lisp,languages, software, computing, computers, nerd, web, internet, bison, compiler, flex, grammar, guide, how to, llvm, programming languages,弘毅,">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="undefined"/>
+    <link href="/favicon.ico" rel="icon">
+
+    <!--<meta name="baidu-site-verification" content="8Sy7vYlszB" />--> <!--百度统计站长工具-->
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!--<script src="./js/jquery-2.0.3.min.js"></script>-->
+
+    <!-- analytics -->
+
+    </head>
+    
+
+    <body>  
+    <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="container">
+
+    <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="/index.html">敏毅</a>
+    
+
+    <div class="collapse navbar-collapse nav-menu">
+
+    <ul class="nav navbar-nav">
+    <li><a href="/public/minyi.html" title="归档"><i class="fa fa-sitemap"></i>MinYi</a></li><li><a href="/public/archive.html" title="归档"><i class="fa fa-archive"></i>归档</a></li><li><a href="/public/about.html" title="关于"><i class="fa fa-user"></i>关于</a></li><li><a href="/public/rss.xml" title="RSS" target="_blank"><i class="fa fa-rss-square"></i>RSS</a></li><li><a href="https://github.com/LeslieZhu/MinYi/issues" title="基于Issue的新博客(推荐)"><i class="fa fa-gift"></i>基于Issue的新博客(推荐)</a></li>
+    </ul>
+
+    </div> <!-- navbar -->
+    </div> <!-- container -->
+    </nav>
+    
+
+    <div class="clearfix"></div>
+    <div class="container">
+    <div class="content">
+    <div class="page-header">
+    <h1 class="title">C++: Vector容器</h1>
+    </div>
+    <div class="row page">
+    <div class="col-md-9">
+    <div class="mypage">
+
+    <div class="slogan">
+    <i class="fa fa-heart"></i>
+    标签: <a href="/public/tags/C++.html"><i class="C++"></i>C++</a>
+    </div>  
+    
+<div id="content">
+
+
+
+
+
+
+
+
+
+
+
+<div id="table-of-contents">
+<h2>目录</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 前言</a></li>
+<li><a href="#sec-2">2 定义和初始化</a></li>
+<li><a href="#sec-3">3 vector对象的操作</a></li>
+<li><a href="#sec-4">4 迭代器</a>
+<ul>
+<li><a href="#sec-4-1">4.1 容器的iterator类型</a></li>
+<li><a href="#sec-4-2">4.2 begin和end操作</a></li>
+<li><a href="#sec-4-3">4.3 示例</a></li>
+<li><a href="#sec-4-4">4.4 const_iterator</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 顺序容器</a>
+<ul>
+<li><a href="#sec-5-1">5.1 顺序容器的操作</a></li>
+<li><a href="#sec-5-2">5.2 begin和end</a></li>
+<li><a href="#sec-5-3">5.3 添加元素</a></li>
+<li><a href="#sec-5-4">5.4 大小</a></li>
+<li><a href="#sec-5-5">5.5 访问元素</a></li>
+<li><a href="#sec-5-6">5.6 删除元素</a></li>
+<li><a href="#sec-5-7">5.7 赋值与swap</a></li>
+<li><a href="#sec-5-8">5.8 反转元素、排序、查找</a></li>
+<li><a href="#sec-5-9">5.9 其他操作</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 容器的选择</a></li>
+<li><a href="#sec-7">7 资料</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 前言</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+<code>Vector</code> 是同一种类型的对象的集合，每个对象都有一个对应的整数索引值。
+</p>
+<p>
+Vector被称为 <code>容器</code> ，因为它可以包含其他对象。
+</p>
+<p>
+一个容器中的所有对象必须是同一类型。
+</p>
+<p>
+使用vector需要包含头文件:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;vector&gt;</span>
+<span style="color: #00ffff; font-weight: bold;">using</span> <span style="color: #ff00ff;">std</span>::<span style="color: #00ff00;">vector</span>;
+</pre>
+
+
+</blockquote>
+
+
+<p>
+vector本身是一个 <code>类模板</code> 。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 定义和初始化</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+几种初始化vector对象的方式:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #00ff00;">vector</span>&lt;T&gt; <span style="color: #ffff00;">v1</span>;           <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#20803;&#32032;&#31867;&#22411;&#26159;T&#65292;&#40664;&#35748;&#20026;&#31354;</span>
+<span style="color: #00ff00;">vector</span>&lt;T&gt; <span style="color: #0000ff; font-weight: bold;">v2</span>(v1);       <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#26159;v1&#30340;&#21103;&#26412;</span>
+<span style="color: #00ff00;">vector</span>&lt;T&gt; <span style="color: #0000ff; font-weight: bold;">v3</span>(n, i);     <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#25253;&#21578;n&#20010;&#20540;&#20026;i&#30340;&#20803;&#32032;</span>
+<span style="color: #00ff00;">vector</span>&lt;T&gt; <span style="color: #0000ff; font-weight: bold;">v4</span>(n)         <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#21253;&#21547;n&#20010;&#20803;&#32032;</span>
+</pre>
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> vector对象的操作</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+几个比较重要的vector操作:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp">v.empty()              <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#21028;&#26029;&#26159;&#21542;&#20026;&#31354;</span>
+v.size()               <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#36820;&#22238;&#20803;&#32032;&#20010;&#25968;</span>
+v.push_back(t)         <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#26411;&#23614;&#36861;&#21152;&#20540;&#20026;t&#30340;&#20803;&#32032;&#65292;&#21160;&#24577;&#22686;&#38271;</span>
+v[n]                   <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#36820;&#22238;&#32034;&#24341;&#20026;n&#30340;&#20803;&#32032;&#20540;</span>
+v1 = v2                <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#23558;v1&#20013;&#30340;&#20803;&#32032;&#26367;&#25442;&#20026;v2&#20803;&#32032;&#30340;&#21103;&#26412;</span>
+v1 == v2               <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#21028;&#26029;&#30456;&#31561;</span>
+!=, &lt;, &lt;=, &gt;, &gt;=       <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#20445;&#25345;&#36825;&#20123;&#25805;&#20316;&#31526;&#24815;&#26377;&#30340;&#21547;&#20041;</span>
+</pre>
+
+
+</blockquote>
+
+
+<p>
+关于size，类型是:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #ff00ff;">vector</span>&lt;T&gt;::size_type   <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#24517;&#39035;&#25351;&#26126;&#20803;&#32032;&#31867;&#22411;</span>
+</pre>
+
+
+</blockquote>
+
+
+<p>
+同时，要注意 <code>下标索引</code> 只能用于读取vector中元素值，却不能用来定义改变元素值，需要用push_back()来改变； <code>通过下标赋值时，有时不会引起任何改变.</code>
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 迭代器</h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+<code>迭代器</code> 是一种检查容器内元素并遍历元素的数据类型，比起用下标索引访问容器元素更加通用，基本标准库的每一种容器都有相应的迭代器类型。
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 容器的iterator类型</h3>
+<div class="outline-text-3" id="text-4-1">
+
+
+<p>
+比如vector容器的迭代器类型:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #ff00ff;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt;::<span style="color: #00ff00;">iterator</span> <span style="color: #ffff00;">iter</span>;
+</pre>
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> begin和end操作</h3>
+<div class="outline-text-3" id="text-4-2">
+
+
+<blockquote>
+
+<ul>
+<li>如果容器非空，则begin函数获取的是第一个元素
+</li>
+<li>如果容器非空，则end函数获取的是一个不存在的元素，即容器最后一个元素的下一个，起到 <code>哨兵</code> 作用，到了end则已经到达了容器的最后一个元素。
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> 示例</h3>
+<div class="outline-text-3" id="text-4-3">
+
+
+<p>
+设置容器元素为0 :
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #00ffff; font-weight: bold;">for</span> (<span style="color: #ff00ff;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt;::<span style="color: #00ff00;">iterator</span> <span style="color: #ffff00;">iter</span> = ivec.begin(); iter != ivec.end(); ++iter) {
+      *iter = 0;
+}
+
+<span style="color: #00ffff; font-weight: bold;">or</span>
+
+<span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#21069;&#25552;&#26159;vector&#24050;&#32463;&#21021;&#22987;&#21270;&#20102;&#31354;&#38388;</span>
+<span style="color: #00ffff; font-weight: bold;">for</span> (<span style="color: #ff00ff;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt;::<span style="color: #00ff00;">size_type</span> <span style="color: #ffff00;">ix</span> = 0; ix != ivec.size(); ++ix) {
+      ivec[ix] = 0;
+}
+</pre>
+
+
+</blockquote>
+
+
+<p>
+打印元素:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;vector&gt;</span>
+<span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;iostream&gt;</span>
+<span style="color: #00ffff; font-weight: bold;">using</span> <span style="color: #00ffff; font-weight: bold;">namespace</span> <span style="color: #ff00ff;">std</span>;
+
+<span style="color: #00ff00;">int</span> <span style="color: #0000ff; font-weight: bold;">main</span>()
+{
+    <span style="color: #00ff00;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt; <span style="color: #ffff00;">ivec</span> = <span style="color: #00ff00;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt;(10,4);
+    <span style="color: #ff00ff;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt;::<span style="color: #00ff00;">iterator</span> <span style="color: #ffff00;">iter</span>;
+
+    <span style="color: #00ffff; font-weight: bold;">for</span> (iter = ivec.begin(); iter != ivec.end(); ++iter){
+        cout &lt;&lt; *iter &lt;&lt; <span style="color: #00ff00;">"\n"</span>;
+    }
+
+    <span style="color: #00ffff; font-weight: bold;">return</span> 0;
+}
+</pre>
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> const_iterator</h3>
+<div class="outline-text-3" id="text-4-4">
+
+
+<p>
+鉴于 <code>iterator</code> 可以访问、修改元素的值，因此出现了只可以访问元素的值，不可以修改元素的值的迭代器类型，即 <code>const_iterator</code> ,其它操作和iteraotr一样。
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> 顺序容器</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+vector属于顺序容器，顺序容器包括:
+</p><blockquote>
+
+<ul>
+<li><code>vector</code> : 支持快速随机访问
+</li>
+<li><code>list</code>   : 支持快速插入/删除
+</li>
+<li><code>deque</code>  : 双端队列
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 顺序容器的操作</h3>
+<div class="outline-text-3" id="text-5-1">
+
+
+<p>
+容器定义的类型别名:
+</p><blockquote>
+
+<ul>
+<li><code>size_type</code>: 保存容器类型的最大可能容器长度
+</li>
+<li><code>iterator</code>: 迭代器类型
+</li>
+<li><code>const_iterator</code>: 只读迭代器类型
+</li>
+<li><code>reverse_iterator</code>: 逆序寻址元素的迭代器
+</li>
+<li><code>const_reverse_iterator</code>: 只读逆序寻址元素的迭代器
+</li>
+<li><code>different_type</code>: 足够存储两个迭代器差值的有符号整数
+</li>
+<li><code>value_type</code>: 元素类型
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> begin和end</h3>
+<div class="outline-text-3" id="text-5-2">
+
+
+<p>
+操作函数:
+</p><blockquote>
+
+<ul>
+<li><code>begin()</code>: 返回迭代器，指向第一个元素
+</li>
+<li><code>end()</code>: 返回迭代器，指向最后一个元素的下一个位置
+</li>
+<li><code>rbegin()</code>: 返回逆序迭代器，指向之后一个元素
+</li>
+<li><code>rend()</code>: 返回逆序迭代器，指向第一个元素的前一个位置
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> 添加元素</h3>
+<div class="outline-text-3" id="text-5-3">
+
+
+<p>
+添加元素的操作:
+</p><blockquote>
+
+<ul>
+<li><code>push_back(t)</code>: 在末尾追加元素，返回void类型
+</li>
+<li><code>push_front(t)</code>: 在开头添加元素（只试用于list和deque类型)
+</li>
+<li><code>insert(p,t)</code>: 在位置p前面添加元素t
+</li>
+<li><code>insert(p,n,t)</code>: 在位置p前面添加n个元素t
+</li>
+<li><code>insert(p,b,e)</code>: 在位置p前面添加由迭代器b和e之间的元素
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+<p>
+在操作的时候， <code>应该避免存储end()返回的迭代器</code> ，因为容器元素的改变后这个迭代器会实现，需要重新加载。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> 大小</h3>
+<div class="outline-text-3" id="text-5-4">
+
+
+<p>
+顺序容器大小的操作:
+</p><blockquote>
+
+<ul>
+<li><code>size()</code>: 元素个数，类型是::size_type
+</li>
+<li><code>max_size()</code>: 可容纳的最大元素个数，大于等于size()
+</li>
+<li><code>empty()</code>: 判断是否为0个元素
+</li>
+<li><code>resize(n)</code>: 调整大小为n，会删除比n大得元素，否则用新添加的元素初始化新元素(<code>会保留小于n的之前元素</code>)
+</li>
+<li><code>resize(n,t)</code>: 调整大小为n，新增的元素值都是t
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> 访问元素</h3>
+<div class="outline-text-3" id="text-5-5">
+
+
+<p>
+访问元素的操作:
+</p><blockquote>
+
+<ul>
+<li><code>c.back()</code>: 返回最后一个元素的引用
+</li>
+<li><code>c.front()</code>: 返回第一个元素的引用
+</li>
+<li><code>c[n]</code>: 返回下标是n的元素的引用
+</li>
+<li><code>c.at(n)</code>: 返回下标为n的元素的引用
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-6" class="outline-3">
+<h3 id="sec-5-6"><span class="section-number-3">5.6</span> 删除元素</h3>
+<div class="outline-text-3" id="text-5-6">
+
+
+
+<p>
+删除元素的操作:
+</p><blockquote>
+
+<ul>
+<li><code>c.erase(p)</code>: 删除迭代器p指向的元素
+</li>
+<li><code>c.erase(b,e)</code>: 删除迭代器b和e之间的元素
+</li>
+<li><code>c.clear()</code>: 清空
+</li>
+<li><code>c.pop_back()</code>: 删除最后一个元素
+</li>
+<li><code>c.pop_front()</code>: 删除第一个元素(<code>vector不可用</code>)
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-7" class="outline-3">
+<h3 id="sec-5-7"><span class="section-number-3">5.7</span> 赋值与swap</h3>
+<div class="outline-text-3" id="text-5-7">
+
+
+<p>
+顺序容器赋值的操作:
+</p><blockquote>
+
+<ul>
+<li><code>c1=c2</code>: 删除容器c1的元素，用c2覆盖
+</li>
+<li><code>c1.swap(c2)</code>: 互相交换元素，但必须类型相同
+</li>
+<li><code>c.assign(b,e)</code>: 将不是指向c的迭代器b和e之间的元素赋值为c
+</li>
+<li><code>c.assign(n,t)</code>: 用n个t元素重置容器c
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-8" class="outline-3">
+<h3 id="sec-5-8"><span class="section-number-3">5.8</span> 反转元素、排序、查找</h3>
+<div class="outline-text-3" id="text-5-8">
+
+
+<p>
+反转:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;algorithm&gt;</span>
+reverse(ivec.begin(), ivec.end());
+</pre>
+
+
+</blockquote>
+
+
+<p>
+排序:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;algorithm&gt;</span>
+sort(ivec.begin(), ivec.end()); <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#40664;&#35748;&#21319;&#24207;</span>
+
+sort(ivec.begin(), ivec.end(), cmp); <span style="color: #ffff00;">// </span><span style="color: #ffff00;">&#36890;&#36807;cmp&#26469;&#36798;&#21040;&#38477;&#24207;&#30340;&#32467;&#26524;</span>
+</pre>
+
+
+</blockquote>
+
+
+<p>
+查找:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #0000ff; font-weight: bold;">#include</span> <span style="color: #00ff00;">&lt;algorithm&gt;</span>
+<span style="color: #ff00ff;">std</span>::find(vector.begin(), vector.end(), item) != vector.end();
+</pre>
+
+
+</blockquote>
+
+
+<p>
+快速初始化:
+</p><blockquote>
+
+
+
+
+<pre class="src src-cpp"><span style="color: #00ffff; font-weight: bold;">static</span> <span style="color: #00ffff; font-weight: bold;">const</span> <span style="color: #00ff00;">int</span> <span style="color: #ffff00;">arr</span>[] = {16,2,77,29};
+
+<span style="color: #00ff00;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt; <span style="color: #0000ff; font-weight: bold;">vec</span> (arr, arr + <span style="color: #00ffff; font-weight: bold;">sizeof</span>(arr) / <span style="color: #00ffff; font-weight: bold;">sizeof</span>(<span style="color: #00ff00;">arr</span>[0]) );
+
+<span style="color: #00ffff; font-weight: bold;">or</span>
+
+<span style="color: #00ff00;">vector</span>&lt;<span style="color: #00ff00;">int</span>&gt; vec2 = { 10, 20, 30 }; <span style="color: #ffff00;">// </span><span style="color: #ffff00;">C++11</span>
+</pre>
+
+
+</blockquote>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-9" class="outline-3">
+<h3 id="sec-5-9"><span class="section-number-3">5.9</span> 其他操作</h3>
+<div class="outline-text-3" id="text-5-9">
+
+
+<p>
+其他操作有:
+</p><blockquote>
+
+<ul>
+<li><code>c.capacity()</code>: 返回容器容量
+</li>
+<li><code>c.~vector&lt;t&gt;()</code>: 销毁容器
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> 容器的选择</h2>
+<div class="outline-text-2" id="text-6">
+
+
+<p>
+对于容器类型的选择，根据应用需求来决定:
+</p><blockquote>
+
+<ul>
+<li>如果程序需要 <code>随机访问</code> 元素，则选择vector或deque容器
+</li>
+<li>如果程序必须在容器 <code>中间位置</code> 插入或删除元素，则应采用list容器
+</li>
+<li>如果程序不是在中间位置，而是在 <code>首尾插入或删除</code> 元素，则选择deque容器
+</li>
+<li>如果程序只需在读取输入时在容器中间位置插入元素，然后随机访问，则可以先用list容器，然后 <code>排序后</code> 赋值给vector容器
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+<p>
+具体还要根据需求具体分析，权衡 <code>访问元素的便利</code> 和 <code>存储代价</code> 。
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> 资料</h2>
+<div class="outline-text-2" id="text-7">
+
+
+<blockquote>
+
+<ul>
+<li>C++ Primer
+</li>
+<li><a href="http://www.cnblogs.com/charley_yang/archive/2010/12/11/1903040.html">http://www.cnblogs.com/charley_yang/archive/2010/12/11/1903040.html</a>
+</li>
+<li><a href="http://www.cplusplus.com/reference/vector/vector/">http://www.cplusplus.com/reference/vector/vector/</a>
+</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/9xd04bzs.aspx">http://msdn.microsoft.com/en-us/library/9xd04bzs.aspx</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/571394/how-to-find-an-item-in-a-stdvector">http://stackoverflow.com/questions/571394/how-to-find-an-item-in-a-stdvector</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/2236197/c03-easiest-way-to-initialize-an-stl-vector-with-hardcoded-elements">http://stackoverflow.com/questions/2236197/c03-easiest-way-to-initialize-an-stl-vector-with-hardcoded-elements</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/3221812/sum-of-elements-in-a-stdvector/3221813#3221813">http://stackoverflow.com/questions/3221812/sum-of-elements-in-a-stdvector/3221813#3221813</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/20977741/stdvector-performance-regression-when-enabling-c11/20983175#20983175">http://stackoverflow.com/questions/20977741/stdvector-performance-regression-when-enabling-c11/20983175#20983175</a>
+</li>
+</ul>
+
+
+
+</blockquote>
+
+
+</div>
+</div>
+</div>
+
+
+    <div>
+    <center>
+    <div class="pagination">
+    <ul class="pagination">
+    <li class="prev"><a href="/public/2014-07-24-vba-17.html" class=alignright prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+    <li><a href="/public/archive.html" target="_blank"><i class="fa fa-archive"></i>Archive</a></li>
+    <li class="next"><a href="/public/2014-07-28-dynamic_cast.html" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+    </ul>
+    </div>
+    </center>
+    </div>
+    
+    <!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lesliezhu"};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- Duoshuo Comment END -->
+    <div id="postamble">
+<a id="gotop" href="#">
+                        <span>▲</span>
+                       </a><p>&nbsp</p>
+<hr>
+<b class="creator">作者简介：</b>
+<p class="creator">朱春来(Leslie Zhu)，日常在GNU/Linux环境下进行C/C++、Python开发。可以<a href="https://github.com/LeslieZhu/ama/issues/new">留言</a>.</p>
+<a href="http://lesliezhu.github.com">访问朱春来(Leslie Zhu)的个人主页(http://lesliezhu.github.com)</a>
+
+</div></div> <!-- col-md-12 --></div> <!-- row -->
+
+    <div class="col-md-3">
+    <div id="sidebar">
+    
+
+    <div class="widget">
+    <h4>联系方式</h4>
+    <ul class="entry list-unstyled">
+    
+    <li>- Mail: pythonisland at gmail dot com</li>
+    <li>- Q&Q: +86 1463090172</li>
+    <li>- Skype: @lesliechu2</li>
+    <li>- <a href=https://github.com/LeslieZhu/ama/issues/new>留言</a></li>
+    
+    </ul>   
+    </div>
+    
+
+    <div class="widget">
+    <h4>最新文章</h4>
+    <ul class="entry list-unstyled">
+    <li><a href="/public/2015-06-25-xiamen-ganzhou-xian.html"><i class="fa fa-file-o"></i>端午旅行记
+</a></li><li><a href="/public/2015-06-05-back-changan.html"><i class="fa fa-file-o"></i>回到长安
+</a></li><li><a href="/public/2015-05-13-mengbian.html"><i class="fa fa-file-o"></i>乡村门匾
+</a></li><li><a href="/public/2015-04-20-python-multi-process-thread.html"><i class="fa fa-file-o"></i>Python中的GIL、多进程和多线程
+</a></li><li><a href="/public/2015-04-12-node-newer.html"><i class="fa fa-file-o"></i>Node简记
+</a></li><li><a href="/public/2015-04-02-i-am-back.html"><i class="fa fa-file-o"></i>喜迎Github解禁
+</a></li>
+    </ul>   
+    </div> 
+    
+
+    <div class="widget">
+    <h4>标签云</h4>
+    <ul class="tag_box inline list-unstyled">
+    <li><a href="/public/tags/札记.html">札记<span>54</span></a></li><li><a href="/public/tags/Python.html">Python<span>22</span></a></li><li><a href="/public/tags/Node.js.html">Node.js<span>1</span></a></li><li><a href="/public/tags/PHP.html">PHP<span>6</span></a></li><li><a href="/public/tags/Web安全.html">Web安全<span>4</span></a></li><li><a href="/public/tags/C++.html">C++<span>14</span></a></li><li><a href="/public/tags/Linux.html">Linux<span>9</span></a></li><li><a href="/public/tags/MBS.html">MBS<span>4</span></a></li><li><a href="/public/tags/GPU.html">GPU<span>1</span></a></li><li><a href="/public/tags/VBA.html">VBA<span>19</span></a></li><li><a href="/public/tags/Parallel.html">Parallel<span>3</span></a></li><li><a href="/public/tags/数据存储.html">数据存储<span>2</span></a></li><li><a href="/public/tags/iOS.html">iOS<span>12</span></a></li><li><a href="/public/tags/编译原理.html">编译原理<span>5</span></a></li><li><a href="/public/tags/Golang.html">Golang<span>1</span></a></li><li><a href="/public/tags/Rust.html">Rust<span>1</span></a></li><li><a href="/public/tags/Mac.html">Mac<span>1</span></a></li><li><a href="/public/tags/Emacs.html">Emacs<span>1</span></a></li><li><a href="/public/tags/Common Lisp.html">Common Lisp<span>1</span></a></li>
+    </ul>
+    </div>
+    
+
+    <div class="widget">
+    <h4>存档</h4>
+    <ul class="entry list-unstyled">
+    <li><a href="/public/tags/201506.html">2015年06月(2)</a></li><li><a href="/public/tags/201505.html">2015年05月(1)</a></li><li><a href="/public/tags/201504.html">2015年04月(3)</a></li><li><a href="/public/tags/201503.html">2015年03月(1)</a></li><li><a href="/public/tags/201502.html">2015年02月(9)</a></li><li><a href="/public/tags/201501.html">2015年01月(3)</a></li><li><a href="/public/tags/201412.html">2014年12月(6)</a></li><li><a href="/public/tags/201411.html">2014年11月(11)</a></li><li><a href="/public/tags/201410.html">2014年10月(12)</a></li><li><a href="/public/tags/201409.html">2014年09月(17)</a></li><li><a href="/public/tags/201408.html">2014年08月(11)</a></li><li><a href="/public/tags/201407.html">2014年07月(16)</a></li><li><a href="/public/tags/201406.html">2014年06月(17)</a></li><li><a href="/public/tags/201405.html">2014年05月(6)</a></li><li><a href="/public/tags/201404.html">2014年04月(2)</a></li><li><a href="/public/tags/201403.html">2014年03月(3)</a></li><li><a href="/public/tags/201402.html">2014年02月(5)</a></li><li><a href="/public/tags/201401.html">2014年01月(3)</a></li><li><a href="/public/tags/201312.html">2013年12月(4)</a></li><li><a href="/public/tags/201311.html">2013年11月(7)</a></li><li><a href="/public/tags/201310.html">2013年10月(6)</a></li><li><a href="/public/tags/201309.html">2013年09月(6)</a></li><li><a href="/public/tags/201308.html">2013年08月(2)</a></li><li><a href="/public/tags/201206.html">2012年06月(1)</a></li><li><a href="/public/archive.html">All(154)</a></li>
+    </ul>
+    </div>
+    
+
+    <div class="widget">
+    <h4>最新评论</h4>
+    <ul class="entry list-unstyled">
+    
+    <!-- 多说最新评论 start -->
+    <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="170"></div>
+    <!-- 多说最新评论 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lesliezhu"};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+    
+    </ul>
+    </div>
+    
+
+    <div class="widget">
+    <h4>个人链接</h4>
+    <ul class="entry list-unstyled">
+    <li><a href="http://weibo.com/zhubuntu" title="zhubuntu" target="_blank"><i class="fa fa-weibo"></i>微博</a></li>
+    <li><a href="https://github.com/LeslieZhu" title="LeslieZhu's Github" target="_blank"><i class="fa fa-github"></i>GitHub账号</a></li>
+    <li><a href="https://github.com/LeslieZhu/ama" title="Ask Me Anything" target="_blank"><i class="fa fa-github"></i>Ask Me Anything</a></li>
+    </ul>
+    </div>
+
+    <div class="widget">
+    <h4>友情链接</h4>
+    <ul class="entry list-unstyled">
+    <li><a href="http://zhuxiong.github.io/" title="朱熊" target="_blank"><i class="fa fa-user"></i>朱熊</a></li>
+    <li><a href="http://kongll.github.io/" title="孔令飞" target="_blank"><i class="fa fa-user"></i>孔令飞</a></li>
+    <li><a href="http://fangqian.github.io/" title="方浅" target="_blank"><i class="fa fa-user"></i>方浅</a></li>
+    </ul>
+    </div>
+
+    <div class="widget">
+    <h4>收藏博客</h4>
+    <li><a href="http://docs.python-guide.org/en/latest/" title="Python-Guide" target="_blank"><i class="fa fa-user"></i>Python指南</a></li>
+    <li><a href="https://docs.python.org/devguide/index.html" title="Python-Guide" target="_blank"><i class="fa fa-user"></i>Python开发指南</a></li>
+    <li><a href="http://dev.swiftguide.cn/#swift_courses" title="Swift" target="_blank"><i class="fa fa-user"></i>Swift 语言指南</a></li>
+    <li><a href="http://www.devtang.com/blog/categories/ios/"  target="_blank"><i class="fa fa-user"></i>唐巧的技术博客</a></li>
+    <li><a href="http://blog.txx.im/"  target="_blank"><i class="fa fa-user"></i>txx's blog</a></li>
+    <li><a href="https://github.com/tangqiaoboy/iOSBlogCN"  target="_blank"><i class="fa fa-user"></i>中文 iOS/Mac 开发博客列表</a></li>
+    </ul>
+    </div>
+    
+
+    </div> <!-- sidebar -->
+    </div> <!-- col-md-3 -->
+    </div> <!-- row-fluid -->
+    </div>
+    </div>
+    
+
+    <div class="container-narrow">
+      <footer>
+        <p>&copy; 2014 Leslie Zhu
+        with help from <a href="https://github.com/LeslieZhu/OrgNote" target="_blank">OrgNote</a>, <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.</a>  Published with GitHub Pages. 
+      </p> </footer>
+    </div> <!-- container-narrow -->
+    
+    <a id="gotop" href="#">   
+      <span>▲</span> 
+    </a>
+
+    <link rel="stylesheet" href="./fancybox/jquery.fancybox.css" media="screen" type="text/css">
+
+    <!--<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F088686960a6cae65e8e593fa2a0b37a3' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    -->
+
+
+  </body>
+</html>
+    
