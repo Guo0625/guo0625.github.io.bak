@@ -6,326 +6,769 @@
     <description>My personal blog</description>
     
       <item>
-        <title>Mac工程下Resource脚本</title>
-        <link>http://github.com/Guo0625/2015/05/18/new-post.html</link>
-        <guid isPermaLink="true">http://github.com/Guo0625/2015/05/18/new-post.html</guid>
-        <pubDate>Mon, 18 May 2015 00:00:00 +0800</pubDate>
-        <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;_TARGET_BUILD_CONTENTS_PATH=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH
-
-echo _TARGET_BUILD_CONTENTS_PATH: $_TARGET_BUILD_CONTENTS_PATH
-
-echo PWD: $PWD
-
-
-
-echo Cleaning $_TARGET_BUILD_CONTENTS_PATH/
-
-
-
-rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/particle/test/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/scripts/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/*
-
-
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/map/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/loading/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/choose/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/images/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/*
-
-
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/*
-
-
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/*
-
-
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/public/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/game/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/*
-
-                                             rm -fr $_TARGET_BUILD_CONTENTS_PATH/ui/sms/*
-
-
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/particle/test/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/scripts/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
-
-
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
-
-
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/map/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/images/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
-
-
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
-
-
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/public
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/game/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
-
-                                             mkdir -p $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/particle/* $_TARGET_BUILD_CONTENTS_PATH/particle/
-
-                                             cp -RLp $PWD/../Resources/acms1/particle/test/* $_TARGET_BUILD_CONTENTS_PATH/particle/test/
-
-                                             cp -RLp $PWD/../Resources/acms1/scripts/* $_TARGET_BUILD_CONTENTS_PATH/scripts/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fj04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fj04/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/liaoji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/liaoji03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/fjfire/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/fjfire/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/player/bisha/* $_TARGET_BUILD_CONTENTS_PATH/sprites/player/bisha/
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/buchongxingdiji/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/buchongxingdiji/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/chongjixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/chongjixingdiji03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/piaofuxingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/piaofuxingdiji04/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/shejixingdiji04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/shejixingdiji04/
-
-
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss01/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss01/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss02/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss02/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss03/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss03/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss04/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss04/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss05/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss05/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/enemy/boss06/* $_TARGET_BUILD_CONTENTS_PATH/sprites/enemy/boss06/
-
-
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/map/* $_TARGET_BUILD_CONTENTS_PATH/map/
-
-                                             cp -RLp $PWD/../Resources/acms1/sprites/bullets/* $_TARGET_BUILD_CONTENTS_PATH/sprites/bullets/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/loading/* $_TARGET_BUILD_CONTENTS_PATH/ui/loading/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/choose/* $_TARGET_BUILD_CONTENTS_PATH/ui/choose/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/images/* $_TARGET_BUILD_CONTENTS_PATH/ui/images/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_logo/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_logo/
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_diamond2/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_diamond2/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_line/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_line/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_jinggao/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_jinggao/
-
-
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/animation/ani_explore/* $_TARGET_BUILD_CONTENTS_PATH/ui/animation/ani_explore/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/* $_TARGET_BUILD_CONTENTS_PATH/ui/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/public/* $_TARGET_BUILD_CONTENTS_PATH/ui/public/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/game/* $_TARGET_BUILD_CONTENTS_PATH/ui/game/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/gameover/* $_TARGET_BUILD_CONTENTS_PATH/ui/gameover/
-
-                                             cp -RLp $PWD/../Resources/acms1/ui/sms/* $_TARGET_BUILD_CONTENTS_PATH/ui/sms/
+        <title>vector中erase删除</title>
+        <link>http://github.com/Guo0625/2015/09/21/stlvectorerase.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/09/21/stlvectorerase.html</guid>
+        <pubDate>Mon, 21 Sep 2015 00:00:00 +0800</pubDate>
+        <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+using namespace std;
+int main()
+{
+    vector&amp;lt;int&amp;gt; vec_int;
+
+    vec_int.push_back(0);
+    vec_int.push_back(1);
+    vec_int.push_back(2);
+    vec_int.push_back(3);
+    vec_int.push_back(4);
+    vec_int.push_back(5);
+
+    for (vector&amp;lt;int&amp;gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();)
+    {
+        if (*iter == 3 || *iter == 2) {
+            iter = vec_int.erase(iter);
+        }
+        else
+        {
+            iter++;
+        }
+    }
+
+    for (vector&amp;lt;int&amp;gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        cout&amp;lt;&amp;lt;*iter&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+    }
+    cout&amp;lt;&amp;lt;endl;
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;执行上面代码输出结果：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;0 1 4 5 
+Program ended with exit code: 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;对比下面的代码&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+using namespace std;
+int main()
+{
+    vector&amp;lt;int&amp;gt; vec_int;
+
+    vec_int.push_back(0);
+    vec_int.push_back(1);
+    vec_int.push_back(2);
+    vec_int.push_back(3);
+    vec_int.push_back(4);
+    vec_int.push_back(5);
+
+    for (vector&amp;lt;int&amp;gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        if (*iter == 3 || *iter == 2)
+        {
+            vec_int.erase(iter);
+        }
+    }
+    for (vector&amp;lt;int&amp;gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        cout&amp;lt;&amp;lt;*iter&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+    }
+    cout&amp;lt;&amp;lt;endl;
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;执行上面代码输出结果：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;0 1 3 4 5 
+Program ended with exit code: 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;vector的删除(erase)操作,由于vector需要能以下标方式取数据，所以必须时刻保证连续的存储空间，对应于实现上，即，当删除vector中间的一个成员时，这个成员后面的所有成员，会以原顺序向前全部拷贝过来。&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>A星寻路算法</title>
+        <link>http://github.com/Guo0625/2015/07/07/astar.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/07/07/astar.html</guid>
+        <pubDate>Tue, 07 Jul 2015 00:00:00 +0800</pubDate>
+        <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;//
+//  Astar.c
+//  Astar
+//
+//  Created by bo li on 15-7-2.
+//  Copyright (c) 2015年 Ada. All rights reserved.
+//
+
+#include &amp;lt;stdio.h&amp;gt;
+
+enum{
+    START = 1,
+    BARRIER,
+    END
+};
+
+const int ROW = 10;
+const int COL = 10;
+
+int map[ROW][COL]={
+    {1,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,3}
+};
+
+typedef struct list{
+    int x;
+    int y;
+    float g; //父节点到邻居的代价1 or 1.4
+    float h; //到目的地的曼哈顿距离
+    float f; //f=g+h
+}list;
+
+struct list openlist[100];
+struct list closelist[100];
+int openlist_size = 0;
+
+//排序找到f最小的节点
+int sortList(list* listArry, int listlen)
+{
+    int index = 0;
+    float f = listArry[0].f;
+    for (int i=0; i&amp;lt;listlen-1; i++)
+    {
+        if (f&amp;gt;=listArry[i+1].f)
+        {
+            f = listArry[i+1].f;
+            index = i+1;
+        }
+    }
+    return index;
+}
+//将openlist表中的f最小的节点存入到closelist中 (c语言没有引用)
+void swpList(list* listsrc, list* listdes, int *listdeslen)
+{
+    listdes[*listdeslen].x = listsrc-&amp;gt;x;
+    listdes[*listdeslen].y = listsrc-&amp;gt;y;
+    listdes[*listdeslen].g = listsrc-&amp;gt;g;
+    listdes[*listdeslen].h = listsrc-&amp;gt;h;
+    listdes[*listdeslen].f = listsrc-&amp;gt;f;
+    (*listdeslen) += 1;
+
+//    printf(&amp;quot;\n添加节点到closelist（%d,%d）\n&amp;quot;,listsrc-&amp;gt;x,listsrc-&amp;gt;y);
+}
+
+//删除openlist中的最小节点
+void deleteNode(list* listArry, int index, int *list_len)
+{
+    for (int i=index; i&amp;lt;*list_len; i++)
+    {
+        listArry[i].x = listArry[i+1].x;
+        listArry[i].y = listArry[i+1].y;
+        listArry[i].g = listArry[i+1].g;
+        listArry[i].h = listArry[i+1].h;
+        listArry[i].f = listArry[i+1].f;
+    }
+
+    *list_len -= 1;
+}
+
+//计算当前节点到目的节点的曼哈顿距离
+float getManhatondistance(int start_x, int start_y, int end_x, int end_y)
+{
+    float distance = 0;
+    int x = abs(end_x-start_x);
+    int y = abs(end_y-start_y);
+
+    if (x==y)
+    {
+//        distance = x*1.4;
+        distance = x+y;
+//        printf(&amp;quot;\n（%d,%d）distance = %f\n&amp;quot;, start_x, start_y, distance);
+    }
+    else
+    {
+//        distance = abs(x-1)*1+y*1.4;
+        distance = x+y;
+//        printf(&amp;quot;\n（%d,%d）distance = %f\n&amp;quot;, start_x, start_y, distance);
+    }
+
+    return distance;
+}
+
+//判断节点是否在openlist中
+int isExistOpenList(int list_len, int x, int y)
+{
+    for (int i=0; i&amp;lt;list_len; i++)
+    {
+        if ((openlist[i].x==x)&amp;amp;&amp;amp;(openlist[i].y==y))
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+//寻找邻居节点，并将其加入到openlist中
+void addNeighbourNode(list* listArry, int *list_len, int index, int end_x, int end_y)
+{
+    int index_x = closelist[index].x;
+    int index_y = closelist[index].y;
+//    printf(&amp;quot;ddd(%d,%d)%d\n&amp;quot;,index_x, index_y,index);
+
+    /*
+     八个方向
+     (-1,-1)(-1,0)(-1,1)
+     ( 0,-1)( 0,0)( 0,1)
+     ( 1,-1)( 1,0)( 1,1)
+     */
+
+
+    //(-1,0)
+    if ((index_x-1&amp;gt;=0)&amp;amp;&amp;amp;(index_y&amp;lt;COL)&amp;amp;&amp;amp;map[index_x-1][index_y+0]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x-1, index_y))
+        {
+            openlist[*list_len].x = index_x-1;
+            openlist[*list_len].y = index_y;
+            openlist[*list_len].g = 1;
+            openlist[*list_len].h = getManhatondistance(index_x-1, index_y, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(0,-1)
+    if ((index_x&amp;gt;=0)&amp;amp;&amp;amp;(index_y-1&amp;gt;=0)&amp;amp;&amp;amp;map[index_x][index_y-1]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x, index_y-1))
+        {
+            openlist[*list_len].x = index_x;
+            openlist[*list_len].y = index_y-1;
+            openlist[*list_len].g = 1;
+            openlist[*list_len].h = getManhatondistance(index_x, index_y-1, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(0,1)
+    if ((index_x&amp;gt;=0)&amp;amp;&amp;amp;(index_y+1&amp;lt;COL)&amp;amp;&amp;amp;map[index_x][index_y+1]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x, index_y+1))
+        {
+            openlist[*list_len].x = index_x;
+            openlist[*list_len].y = index_y+1;
+            openlist[*list_len].g = 1;
+            openlist[*list_len].h = getManhatondistance(index_x, index_y+1, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(1,0)
+    if ((index_x+1&amp;lt;ROW)&amp;amp;&amp;amp;(index_y&amp;gt;=0)&amp;amp;&amp;amp;map[index_x+1][index_y]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x+1, index_y))
+        {
+            openlist[*list_len].x = index_x+1;
+            openlist[*list_len].y = index_y;
+            openlist[*list_len].g = 1;
+            openlist[*list_len].h = getManhatondistance(index_x+1, index_y, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(-1,-1)
+    if ((index_x-1&amp;gt;=0)&amp;amp;&amp;amp;(index_y-1&amp;gt;=0)&amp;amp;&amp;amp;map[index_x-1][index_y-1]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x-1, index_y-1))
+        {
+            openlist[*list_len].x = index_x-1;
+            openlist[*list_len].y = index_y-1;
+            openlist[*list_len].g = 1.4;
+            openlist[*list_len].h = getManhatondistance(index_x-1, index_y-1, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(1,-1)
+    if ((index_x+1&amp;lt;ROW)&amp;amp;&amp;amp;(index_y-1&amp;gt;=0)&amp;amp;&amp;amp;map[index_x+1][index_y-1]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x+1, index_y-1))
+        {
+            openlist[*list_len].x = index_x+1;
+            openlist[*list_len].y = index_y-1;
+            openlist[*list_len].g = 1.4;
+            openlist[*list_len].h = getManhatondistance(index_x+1, index_y-1, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+    //(-1,1)
+    if ((index_x-1&amp;gt;=0)&amp;amp;&amp;amp;(index_y+1&amp;lt;COL)&amp;amp;&amp;amp;map[index_x-1][index_y+1]!=BARRIER)
+    {
+         if(!isExistOpenList(*list_len, index_x-1, index_y+1))
+         {
+             openlist[*list_len].x = index_x-1;
+             openlist[*list_len].y = index_y+1;
+             openlist[*list_len].g = 1.4;
+             openlist[*list_len].h = getManhatondistance(index_x-1, index_y+1, end_x, end_y);
+             openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+             *list_len += 1;
+         }
+    }
+    //(1,1)
+    if ((index_x+1&amp;lt;ROW)&amp;amp;&amp;amp;(index_y+1&amp;lt;COL)&amp;amp;&amp;amp;map[index_x+1][index_y+1]!=BARRIER)
+    {
+        if(!isExistOpenList(*list_len, index_x+1, index_y+1))
+        {
+            openlist[*list_len].x = index_x+1;
+            openlist[*list_len].y = index_y+1;
+            openlist[*list_len].g = 1.4;
+            openlist[*list_len].h = getManhatondistance(index_x+1, index_y+1, end_x, end_y);
+            openlist[*list_len].f = openlist[*list_len].g + openlist[*list_len].h;
+            *list_len += 1;
+        }
+    }
+}
+
+//判断终点是否在closelist中
+int isEndNodeExistCloseTable(list* listArry, int len, int end_x, int end_y)
+{
+    for (int i=0; i&amp;lt;len; i++)
+    {
+        if ((listArry[i].x == end_x)&amp;amp;&amp;amp;(listArry[i].y == end_y))
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main(int argvc, char **argv)
+{
+//    printf(&amp;quot;hello astar.\n&amp;quot;);
+    int start_x=0;
+    int start_y=0;
+    int end_x=0;
+    int end_y=0;
+    for (int i=0; i&amp;lt;ROW; i++)
+        for (int j=0; j&amp;lt;COL; j++)
+        {
+            if (map[i][j]==START)
+            {
+                start_x = i;
+                start_y = j;
+
+//                printf(&amp;quot;start (%d,%d)\n&amp;quot;,start_x,start_y);
+            }
+            if (map[i][j]==END)
+            {
+                end_x = i;
+                end_y = j;
+//                printf(&amp;quot;end (%d,%d)\n&amp;quot;,end_x,end_y);
+            }
+        }
+
+    openlist[0].x = start_x;
+    openlist[0].y = start_y;
+    openlist[0].f = 0;//起点的f为0
+    openlist_size = 1;
+
+    int closelist_len = 0;
+
+    while (openlist_size)
+    {
+//        printf(&amp;quot;openlist_size qian = %d\n&amp;quot;,openlist_size);
+        int index = 0; //openlist中f最小的节点下标
+        //找到代价最小的节点
+        index = sortList(openlist, openlist_size);
+//        printf(&amp;quot;index = %d\n&amp;quot;,index);
+        //将代价最小的插入closelist中
+        swpList(&amp;amp;openlist[index], closelist, &amp;amp;closelist_len);
+//        printf(&amp;quot;closelist_len = %d\n&amp;quot;,closelist_len);
+        //从openlist中移除代价最小的节点
+        deleteNode(openlist, index, &amp;amp;openlist_size);
+//        printf(&amp;quot;openlist_size = %d\n&amp;quot;,openlist_size);
+        //添加代价最小节点的邻居节点到openlist中
+        addNeighbourNode(openlist, &amp;amp;openlist_size, closelist_len-1, end_x, end_y);
+        //
+        if (isEndNodeExistCloseTable(closelist, closelist_len, end_x, end_y))
+        {
+            printf(&amp;quot;\npath &amp;quot;);
+            for (int i=0; i&amp;lt;closelist_len; i++)
+            {
+                printf(&amp;quot;(%d,%d) &amp;quot;,closelist[i].x,closelist[i].y);
+            }
+            printf(&amp;quot;\n\n&amp;quot;);
+            break;
+        }
+
+//        printf(&amp;quot;\nOPEN  &amp;quot;);
+//        for (int i=0; i&amp;lt;openlist_size; i++)
+//        {
+//            printf(&amp;quot;(%d,%d)-&amp;gt;&amp;quot;,openlist[i].x,openlist[i].y);
+//        }
+//        printf(&amp;quot;\nCLOSE  &amp;quot;);
+//        for (int i=0; i&amp;lt;closelist_len; i++)
+//        {
+//            printf(&amp;quot;(%d,%d)-&amp;gt;&amp;quot;,closelist[i].x,closelist[i].y);
+//        }
+//        printf(&amp;quot;\n\n&amp;quot;);
+    }
+    return 0;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>轻型数据库sqlite的使用</title>
+        <link>http://github.com/Guo0625/2015/06/23/new-post.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/06/23/new-post.html</guid>
+        <pubDate>Tue, 23 Jun 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;sqlite的存储结构&lt;/p&gt;
+
+&lt;p&gt;属性：key1 key2 key3 key4&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  1    2    3    4 
+  a    b    c    d
+  一   二    三   四
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;数据库中是顺序存储的：key1 key2 key3 key4 1    2    3    4 a    b    c    d 一   二    三   四&lt;/p&gt;
+
+&lt;video src=&quot;http://guo0625.github.io/assets/blob/master/MichaelJackson.mp4&quot; poster=&quot;http://guo0625.github.io/lay1010/tree/gh-pages/public/img/dog.jpg&quot; controls&gt;&lt;/video&gt;
+
+&lt;p&gt;&lt;embed src=&quot;http://myst729.github.io/assets/media/2015/web-components-custom-elements.mp4&quot; allowFullScreen=&quot;true&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;350&quot; align=&quot;middle&quot; allowScriptAccess=&quot;always&quot; &gt;&lt;/embed&gt;&lt;/p&gt;
+
+&lt;iframe frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;498&quot; src=&quot;http://v.qq.com/iframe/player.html?vid=z0117bzvjfe&amp;tiny=0&amp;auto=0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; wmode=&quot;transparent&quot; quality=&quot;high&quot; height=&quot;480&quot; width=&quot;480&quot; src=&quot;http://video.weibo.com/player/1034:aa40fa9d786fb043f6f3256f90f3dfab/v.swf&quot;/&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>利用github jekyll 创建 blog</title>
+        <link>http://github.com/Guo0625/2015/06/12/jekyll.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/06/12/jekyll.html</guid>
+        <pubDate>Fri, 12 Jun 2015 00:00:00 +0800</pubDate>
+        <description>&lt;ul&gt;
+    &lt;li&gt;作者：&lt;a href=&quot;http://weibo.com/xpmozong&quot; target=&quot;blank&quot;&gt;寞踪&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;本文地址：http://xpmozong.github.io/ruby/2013/11/27/jekyll/&lt;/li&gt;
+    &lt;li&gt;转载请注明出处&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一、准备工作&lt;/p&gt;
+
+&lt;p&gt;1、安装ruby，windows下推荐安装&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot; target=&quot;_blank&quot;&gt;rubyinstaller&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2、windows安装&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot; target=&quot;_blank&quot;&gt;DevKit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;命令行进入刚刚安装的目录，我安装在这个目录：D:\DevKit,执行&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;ruby dk.rb init
+ruby dk.rb install
+gem install rdiscount --platform=ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如果能安装rdiscount成功说明安装DevKit成功。&lt;/p&gt;
+
+&lt;p&gt;3、安装jekyll  &lt;/p&gt;
+
+&lt;p&gt;执行 gem install jekyll  命令&lt;/p&gt;
+
+&lt;p&gt;windows下会有编码问题，修改这个文件E:\soft\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-1.3.0\lib\jekyll&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;def read_yaml(base, name, opts = {})
+  begin
+    # self.content = File.read_with_options(File.join(base, name),
+    #                                       merged_file_read_opts(opts))
+    self.content = File.read(File.join(base, name), :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)
+    if self.content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+      self.content = $POSTMATCH
+      self.data = YAML.safe_load($1)
+    end
+  rescue SyntaxError =&amp;gt; e
+    puts &amp;quot;YAML Exception reading #{File.join(base, name)}: #{e.message}&amp;quot;
+  rescue Exception =&amp;gt; e
+    puts &amp;quot;Error reading file #{File.join(base, name)}: #{e.message}&amp;quot;
+  end
+
+  self.data ||= {}
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;self.content = File.read(File.join(base, name), :encoding =&gt; &quot;utf-8&quot;) 把原来的注释，加上这行代码。&lt;/p&gt;
+
+&lt;p&gt;二、创建github账户&lt;/p&gt;
+
+&lt;p&gt;1、windows下操作，下载windows github，并在github上创建项目，名字是USERNAME.github.io。打开windows github，下载刚创建的项目，然后进入目录。&lt;/p&gt;
+
+&lt;p&gt;下载&lt;a href=&quot;https://github.com/plusjade/jekyll-bootstrap&quot; target=&quot;_blank&quot;&gt;jekyll-bootstrap&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;解压后把.gitignore删掉，然后把文件夹里的内容，复制到自己的文件里。&lt;/p&gt;
+
+&lt;p&gt;修改 _config.yml文件，这一行改成自己的production_url : http://USERNAME.github.io&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;本地运行，访问http://127.0.0.1:4000/&lt;/p&gt;
+
+&lt;p&gt;推送到github上&lt;/p&gt;
+
+&lt;p&gt;2、linux下，yum install rubygems ，gem install rdiscount --platform=ruby，gem install jekyll&lt;/p&gt;
+
+&lt;p&gt;先要在github上添加ssh key，https://help.github.com/articles/generating-ssh-keys#platform-linux&lt;/p&gt;
+
+&lt;p&gt;先创建项目USERNAME.github.io，不要点生成README&lt;/p&gt;
+
+&lt;p&gt;在命令下，创建USERNAME.github.io文件夹，并进入&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;touch README.md
+git init
+git add README.md
+git commit -m &amp;quot;first commit&amp;quot;
+git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;剩下的同理windows&lt;/p&gt;
+
+&lt;p&gt;二、Jekyll使用&lt;/p&gt;
+
+&lt;p&gt;1、创建第一篇博文&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;rake post title=&amp;quot;Hello World&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;默认情况下rake命令会在你的_posts目录下创建一个名为[年-月-日-post title.md]的文件，例如2012-05-04-Hello-World.md，名称中的空格会转换成“-”，时间为当前系统时间。当然这些都是可配置的。rake命令默认不会覆盖掉相同名称的文件。&lt;/p&gt;
+
+&lt;p&gt;2、创建第一个页面&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# 根目录下创建页面
+$ rake page name=&amp;quot;about.md&amp;quot;
+
+# 自定义目录下创建页面
+$ rake page name=&amp;quot;pages/about.md&amp;quot;
+
+# 创建类似./pages/about/index.html目录结构的页面
+$ rake page name=&amp;quot;pages/about&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+    三、域名绑定，这里有
+    &lt;a href=&quot;https://help.github.com/articles/setting-up-a-custom-domain-with-pages&quot; target=&quot;_blank&quot;&gt;详细介绍&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;四、一点小补充&lt;/p&gt;
+
+&lt;p&gt;git 命令&lt;/p&gt;
+
+&lt;p&gt;1、推送&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git add .
+git commit -m &amp;#39;test&amp;#39;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2、更新&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git pull origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>break,continue,break的用法</title>
+        <link>http://github.com/Guo0625/2015/06/12/break-continue-return.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/06/12/break-continue-return.html</guid>
+        <pubDate>Fri, 12 Jun 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;1、return 语句的作用&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  (1) return 从当前的方法中退出,返回到该调用的方法的语句处,继续执行。 
+  (2) return 返回一个值给调用该方法的语句，返回值的数据类型必须与方法的声明中的返回值的类型一致，可以使用强制类型转换来是数据类型一致。 
+  (3) return 当方法说明中用void声明返回类型为空时，应使用这种格式，不返回任何值。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2、break语句的作用 &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  (1) 只能在循环体内和switch语句体内使用break语句。 
+  (2) 当break出现在循环体中的switch语句体内时，其作用只是跳出该switch语句体。
+  (3) 当break出现在循环体中，但并不在switch语句体内时，则在执行break后，跳出本层循环体。 
+  (4) 在循环结构中，应用break语句使流程跳出本层循环体，从而提前结束本层循环。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;3、continue语句作用 &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  (1) continue语句的一般形式为：contonue; 
+  (2) 其作用是结束本次循环，即跳过本次循环体中余下尚未执行的语句，接着再一次进行循环的条件判定。 
+  (3) 注意：执行continue语句并没有使整个循环终止。在while和do-while循环中，continue语句使得流程直接跳到循环控制条件的测试部分 ，然后决定循环是否继续进行。 
+  (4) 在for 循环中，遇到continue后，跳过循环体中余下的语句，而去对for语句中的“表达式3”求值，然后进行“表达式2”的条件测试，最后根据“表达式2”的值来决定for循环是否执行。在循环体内，不论continue是作为何种语句中的语句成分，都将按上述功能执行，这点与break有所不同。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>初识Jni--HelloJni示例</title>
+        <link>http://github.com/Guo0625/2015/06/11/jni.html</link>
+        <guid isPermaLink="true">http://github.com/Guo0625/2015/06/11/jni.html</guid>
+        <pubDate>Thu, 11 Jun 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;&lt;center&gt;第1部分&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;第一步：在自己所建的目录中创建HelloJni.java文件&lt;/p&gt;
+
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  --hellojni
+     --HelloJni.java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HelloJni.java内容&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;public class HelloJni{
+
+    static{
+        System.loadLibrary(&amp;quot;hellojni&amp;quot;); 
+    }
+    public native void sayHello();
+    public static void main(String[] args){
+        HelloJni helloJni = new HelloJni();
+        helloJni.sayHello();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第二步：在终端执行cd命令进入hellojni目录里，执行javac HelloJni.java命令生成class文件&lt;/p&gt;
+
+&lt;p&gt;终端执行命令&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;localhost:xunzhou$ cd hellojni
+localhost:hellojni xunzhou$ ls
+HelloJni.java
+localhost:hellojni xunzhou$ javac HelloJni.java 
+localhost:hellojni xunzhou$ ls -l
+total 16
+-rw-r--r--  1 xunzhou  staff  315  6 11 10:15 HelloJni.class
+-rw-r--r--  1 xunzhou  staff  191  6 11 10:00 HelloJni.java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  --hellojni
+     --HelloJni.java
+     --HelloJni.class
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第三步：生成头文件，执行javah HelloJni命令&lt;/p&gt;
+
+&lt;p&gt;终端执行命令&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;localhost:hellojni xunzhou$ javah HelloJni
+localhost:hellojni xunzhou$ ls
+HelloJni.class  HelloJni.h  HelloJni.java
+localhost:hellojni xunzhou$ ls -l
+total 24
+-rw-r--r--  1 xunzhou  staff  315  6 11 10:15 HelloJni.class
+-rw-r--r--  1 xunzhou  staff  400  6 11 10:19 HelloJni.h
+-rw-r--r--  1 xunzhou  staff  191  6 11 10:00 HelloJni.java
+localhost:hellojni xunzhou$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  --hellojni
+     --HelloJni.java
+     --HelloJni.class
+     --HelloJni.h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;头文件内容&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/* DO NOT EDIT THIS FILE - it is machine generated */
+#include &amp;lt;jni.h&amp;gt;
+/* Header for class HelloJni */
+
+#ifndef _Included_HelloJni
+#define _Included_HelloJni
+#ifdef __cplusplus
+extern &amp;quot;C&amp;quot; {
+#endif
+/*
+ * Class:     HelloJni
+ * Method:    sayHello
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_HelloJni_sayHello
+  (JNIEnv *, jobject, jstring);
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;至此，头文件创建完毕，.c文件自己创建即可。而jni之间参数传递，函数调用可以上网搜索有很多这方面的教程。&lt;/p&gt;
+
+&lt;p&gt;另外，大家都看到创建的头文件中函数名为Java_HelloJni_sayHello。只有一级的包名HelloJni，类似com.example.hellojni的报名怎么创建呢。过程和上面的差不多，只是执行创建javah命令时有点区别。下面主要介绍一下。&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;第2部分&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;第一步：创建类似java工程src目录的目录结构（例：src/com/example/hellojni）&lt;/p&gt;
+
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    --com
+      --example
+        --hellojni
+          --HelloJni.java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;HelloJni.java内容&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;package com.example.hellojni;
+
+public class HelloJni{
+
+    static{
+        System.loadLibrary(&amp;quot;hellojni&amp;quot;); 
+    }
+    public native void sayHello();
+    public static void main(String[] args){
+        HelloJni helloJni = new HelloJni();
+        helloJni.sayHello();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第二步：进入HelloJni.java所在的目录内执行javac的命令（同上面第二步）。&lt;/p&gt;
+
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    --com
+      --example
+        --hellojni
+          --HelloJni.java
+          --HelloJni.class
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第三步：生成头文件，如果执行javah命令会报如下错误。&lt;/p&gt;
+
+&lt;p&gt;(中文在Mac下不识别，有乱码)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;localhost:hellojni xunzhou$ javah HelloJni
+?????޷????? HelloJni
+????????ļ??? ./HelloJni.class
+???ļ???????????ࣺ com.example.hellojni.HelloJni
+??ɾ?????ļ???ȷ?????ļ?λ????ȷ????·????Ŀ¼?С?
+com.sun.tools.javac.util.Abort
+    at com.sun.tools.javac.comp.Check.completionError(Check.java:162)
+    at com.sun.tools.javadoc.DocEnv.loadClass(DocEnv.java:147)
+    at com.sun.tools.javadoc.RootDocImpl.&amp;lt;init&amp;gt;(RootDocImpl.java:77)
+    at com.sun.tools.javadoc.JavadocTool.getRootDocImpl(JavadocTool.java:159)
+    at com.sun.tools.javadoc.Start.parseAndExecute(Start.java:330)
+    at com.sun.tools.javadoc.Start.begin(Start.java:128)
+    at com.sun.tools.javadoc.Main.execute(Main.java:66)
+    at com.sun.tools.javah.Main.main(Main.java:147)
+javadoc: ???? - ????????
+2 ????
+localhost:hellojni xunzhou$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;需要退出到com/example/hellojni目录外执行命令javah com.examlpe.hellojni.HelloJni（假如目录为Jni/com/example/hellojni，需要在Jni中执行命令）而不是javah HelloJni，这里是有区别的。&lt;/p&gt;
+
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    --Jni
+        --com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;执行命令&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;localhost:Jni xunzhou$ javah com.examlpe.hellojni.HelloJni
+localhost:Jni xunzhou$ ls
+com             
+com_examlpe_hellojni_HelloJni.h
+localhost:Jni xunzhou$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;头文件内容&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/* DO NOT EDIT THIS FILE - it is machine generated */
+#include &amp;lt;jni.h&amp;gt;
+/* Header for class com_example_hellojni_HelloJni */
+
+#ifndef _Included_com_example_hellojni_HelloJni
+#define _Included_com_example_hellojni_HelloJni
+#ifdef __cplusplus
+extern &amp;quot;C&amp;quot; {
+#endif
+/*
+ * Class:     com_example_hellojni_HelloJni
+ * Method:    sayHello
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_example_hellojni_HelloJni_sayHello
+  (JNIEnv *, jobject, jstring);
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;至此，Jni的头文件创建完毕。&lt;/p&gt;
+</description>
       </item>
     
       <item>
@@ -865,7 +1308,7 @@ Now if both myCFile1.o and MyCFile2.o are linked by the linker they will both po
 
 &lt;p&gt;接下来便是，解析出manifest文件，通过使用&lt;a href=&quot;http://connortumbleson.com/apktool/googlecode/&quot;&gt;apkTool&lt;/a&gt;工具可以将apk文件解析。&lt;/p&gt;
 
-&lt;p&gt;apktool可能也会遇到上述与dex2jar相似的问题，无非是修改权限、换版本照着做就可以了。&lt;/p&gt;
+&lt;p&gt;apktool可能也会遇到上述与dex2jar相似的问题，无非是修改权限、换版本照着做就可以了。apktool和apktool.jar放在/usr/local/bin目录下，可以使用apktool命令。&lt;/p&gt;
 
 &lt;p&gt;执行命令解析apk文件&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sdkPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;$ &lt;span class=&quot;n&quot;&gt;apktool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;liantongstar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apk&lt;/span&gt; 
@@ -920,90 +1363,7 @@ Now if both myCFile1.o and MyCFile2.o are linked by the linker they will both po
       </item>
     
       <item>
-        <title>Matlab科研小贴士</title>
-        <link>http://github.com/Guo0625/2014/09/11/Matlab-tips.html</link>
-        <guid isPermaLink="true">http://github.com/Guo0625/2014/09/11/Matlab-tips.html</guid>
-        <pubDate>Thu, 11 Sep 2014 00:00:00 +0800</pubDate>
-        <description>&lt;p&gt;使用MATLAB运行算法程序时，可能遇到各种各样的报错。比如，为了保护隐私数据，我在分布式矩阵补全算法中加入随机矩阵之后，某项变量在运行几百步之后会出现NaN报错。我只根据算法顺序去分析问题出现的可能原因，并修改程序。感觉并没有很好地利用MATLAB的强大功能去锁定症结所在。幸运的是，&lt;a href=&quot;http://home.ustc.edu.cn/%7Eshiwei00/index.html&quot;&gt;施伟&lt;/a&gt;大师兄当时和我在一起，他非常热心地帮我分析问题，教我以后遇到类似状况应该怎么去分析与思考。和大师兄讨论了半小时，感觉自己收获不少。&lt;/p&gt;
-
-&lt;p&gt;这篇文章会陆续记录下自己使用MATLAB的体会，以及解决问题的一些技巧。&lt;/p&gt;
-
-&lt;h3&gt;Clear&lt;/h3&gt;
-
-&lt;p&gt;运行一段代码前通常需要将工作空间里的已有数据清除掉。只需要在编辑有实际意义的代码之前写下如下代码：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;n&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;close&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Random Seed&lt;/h3&gt;
-
-&lt;p&gt;为了保证程序在相同环境下运行以便测试某一个或几个改变对于算法的影响，在使用各种random命令时，需要设定固定种子。这样就不会因为每次随机产生的序列不同而影响程序运行结果。设置随机种子的代码如下：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;%% random seed&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;%seed=round(5000*rand);       % use this line if you set a random seed&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3302&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;% use this line if you set a fixed seed. 3302 can be replaced by other numbers.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Seed = %d\n&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;% print the current seed &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;RandStream&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;file&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;RandStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setGlobalStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RandStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;mt19937ar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;seed&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-   &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-   &lt;span class=&quot;nb&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;state&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;^&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;NaN&lt;/h3&gt;
-
-&lt;p&gt;NaN是Not a Number的缩写。当某变量显示NaN时，表示该变量是不明确的数值结果。比如0/0、inf/inf等运算会出现NaN报错。遇到这种情况，首先判断NaN出现在哪一步：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;isnan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norres&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;%括号里是变量名。判断norres是否为NaN，若是，则在该步暂停程序。&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;keyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;再在命令窗里单独查看与该变量有关的其他变量，从而排除正常变量，获知究竟是哪个或哪几个变量出了问题，变为无穷大或无穷小。再检查与这些变量有关的算法。&lt;/p&gt;
-
-&lt;h3&gt;SaveAs&lt;/h3&gt;
-
-&lt;p&gt;若需要比较各参数对算法性能的影响，通常是在程序中修改参数运行，得到算法收敛精度与迭代次数的曲线图。再根据曲线图反向思考修改哪些参数有效。这个过程需要保存产生的大量图片。可以使用&lt;code&gt;hold on&lt;/code&gt;命令将所有虚线画在同一张图上，也可以使用&lt;code&gt;saveas&lt;/code&gt;将所有图片自动保存。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;c&quot;&gt;%% plot&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;semilogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_axis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;b-&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;%b：蓝色。－：线段形状&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;fontsize&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;grid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it Iteration&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it Normalized residual&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;\fontsize{12}\it text&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;%text：这条蓝色代表什么&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;hold&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;saveas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gcf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;filename&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;fig&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;c&quot;&gt;%filename：将图片保存为这个名字。fig：保存为fig格式&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;保存变量数据的命令：&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;save(&amp;#39;filename&amp;#39;)
-save(&amp;#39;filename&amp;#39;,&amp;#39;variables&amp;#39;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;注意，在使用&lt;code&gt;hold on&lt;/code&gt;命令时，应该保留上次程序运行后产生的各种数据。即不能在程序中写类似与&lt;code&gt;clear all&lt;/code&gt;之类的清除语句，否则上次曲线图也将被删除。&lt;/p&gt;
-
-&lt;h3&gt;矩阵规范化&lt;/h3&gt;
-
-&lt;p&gt;已知满秩矩阵A，进行下面操作使其所有奇异值均为1。&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-matlab&quot; data-lang=&quot;matlab&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;安装CVX&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;将cvx压缩包解压&lt;/li&gt;
-&lt;li&gt;将cvx文件夹拷贝至如D:\MATLAB Programs\Compressed Sensing目录下&lt;/li&gt;
-&lt;li&gt;在Current Folder窗口中打开cvx文件夹&lt;/li&gt;
-&lt;li&gt;在Command Window中输入cvx_setup&lt;/li&gt;
-&lt;li&gt;在MATLAB的File菜单下的set path把此路径加上。&lt;/li&gt;
-&lt;li&gt;把路径加进去后在file→Preferences→General的Toolbox Path Caching里点击update Toolbox Path Cache更新一下&lt;/li&gt;
-&lt;li&gt;完成&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;%%分段运行程序&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;选中%%分段&lt;/li&gt;
-&lt;li&gt;右键选择&lt;code&gt;evaluate current section&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      </item>
-    
-      <item>
-        <title>Book List 2014</title>
+        <title>2014年阅读书单</title>
         <link>http://github.com/Guo0625/2014/06/01/Book-List-2014.html</link>
         <guid isPermaLink="true">http://github.com/Guo0625/2014/06/01/Book-List-2014.html</guid>
         <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>

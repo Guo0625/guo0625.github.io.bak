@@ -9,9 +9,21 @@
 
   /sitemap.txt
 
+  /page2/index.html
 
 
-  /2015/05/18/new-post.html
+
+  /2015/09/21/stlvectorerase.html
+
+  /2015/07/07/astar.html
+
+  /2015/06/23/new-post.html
+
+  /2015/06/12/jekyll.html
+
+  /2015/06/12/break-continue-return.html
+
+  /2015/06/11/jni.html
 
   /2015/05/18/adt.html
 
@@ -24,8 +36,6 @@
   /2015/05/12/android.html
 
   /2015/05/11/record1.html
-
-  /2014/09/11/Matlab-tips.html
 
   /2014/06/01/Book-List-2014.html
 

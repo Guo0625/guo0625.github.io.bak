@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-<title>首页 | oh_ouyang的博客</title>
+<title>vector中erase删除 | oh_ouyang的博客</title>
 <meta name="author" content="oh_ouyang">
 
 
@@ -391,131 +391,102 @@
             <div class="row">
   <div class="col-md-13 aside3-title">
     <br>
-    <h2 id="#identifier"><i class="fa fa-home fa-lg"></i></h2>
+    <h2 id="#identifier">vector中erase删除</h2>
+    2015年09月21日
   </div>
   <div class="col-md-13 aside3-content">
-    <div id="page-content">
-      <!--<br>--> 
-<center><h3>原来你也在这儿</h3></center>
-<div class="row">
-  <div class="col-md-12">
-    <div class="panel panel-primary">
-      <div class="panel-heading">最新文章</div>
-      
-        <a  href='/2015/05/12/android.html' class="list-group-item pjaxlink clearfix">
-          初试android逆向工程
-          <span class="badge">2015年05月12日</span>
-        </a>
-      
-        <a  href='/2015/05/11/record1.html' class="list-group-item pjaxlink clearfix">
-          每日一记
-          <span class="badge">2015年05月11日</span>
-        </a>
-      
-        <a  href='/2014/06/01/Book-List-2014.html' class="list-group-item pjaxlink clearfix">
-          2014年阅读书单
-          <span class="badge">2014年06月01日</span>
-        </a>
-      
-        <a  href='/2011/06/25/Seeker-reply-me.html' class="list-group-item pjaxlink clearfix">
-          重读《我二十一岁那年》— 史铁生
-          <span class="badge">2011年06月25日</span>
-        </a>
-      
-    </div>
-  </div>
-<!--   
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Optimization</div>
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-        
-      </div>
-    </div>
-  
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">LaTeX</div>
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-         
-          
-        
-      </div>
-    </div>
-   -->
-</div>
- 
+    <hr>
+    <div id="content">
+      <div class="highlight"><pre><code class="language-text" data-lang="text">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main()
+{
+    vector&lt;int&gt; vec_int;
+
+    vec_int.push_back(0);
+    vec_int.push_back(1);
+    vec_int.push_back(2);
+    vec_int.push_back(3);
+    vec_int.push_back(4);
+    vec_int.push_back(5);
+
+    for (vector&lt;int&gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();)
+    {
+        if (*iter == 3 || *iter == 2) {
+            iter = vec_int.erase(iter);
+        }
+        else
+        {
+            iter++;
+        }
+    }
+
+    for (vector&lt;int&gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        cout&lt;&lt;*iter&lt;&lt;&quot; &quot;;
+    }
+    cout&lt;&lt;endl;
+    return 0;
+}
+</code></pre></div>
+<p>执行上面代码输出结果：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">0 1 4 5 
+Program ended with exit code: 0
+</code></pre></div>
+<p>对比下面的代码</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main()
+{
+    vector&lt;int&gt; vec_int;
+
+    vec_int.push_back(0);
+    vec_int.push_back(1);
+    vec_int.push_back(2);
+    vec_int.push_back(3);
+    vec_int.push_back(4);
+    vec_int.push_back(5);
+
+    for (vector&lt;int&gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        if (*iter == 3 || *iter == 2)
+        {
+            vec_int.erase(iter);
+        }
+    }
+    for (vector&lt;int&gt;::iterator iter = vec_int.begin(); iter!=vec_int.end();iter++)
+    {
+        cout&lt;&lt;*iter&lt;&lt;&quot; &quot;;
+    }
+    cout&lt;&lt;endl;
+    return 0;
+}
+</code></pre></div>
+<p>执行上面代码输出结果：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">0 1 3 4 5 
+Program ended with exit code: 0
+</code></pre></div>
+<p>vector的删除(erase)操作,由于vector需要能以下标方式取数据，所以必须时刻保证连续的存储空间，对应于实现上，即，当删除vector中间的一个成员时，这个成员后面的所有成员，会以原顺序向前全部拷贝过来。</p>
 
     </div>
     <hr>
-    <div id="disqus_thread">
+<!--     <div id="disqus_thread">
   <button type="button" name="oh-ouyang" class="btn btn-default show-commend">	
   	<i class="fa fa-comment-o fa-lg" style="color: #16a095;"></i>     <!-- 修改显示评论按钮图标-->
   </button>
 </div>
-
+ -->
+  </div>
+  <!-- 目录 -->
+  <div id="content_table" style="position:fixed;right:20px;top:120px;display:none;">
+    <div class="panel panel-success">
+      <div class="panel-body" id="nav"></div>
+    </div>
   </div>
 </div>
+
 
           </div>
         </div>
